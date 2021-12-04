@@ -1,0 +1,32 @@
+@use "./colors";
+@use "./fonts";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  overflow-y: scroll; /*always show scroll bar*/
+  font-size: fonts.$font-size;
+
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+p {
+  color: colors.$main-text-color;
+}

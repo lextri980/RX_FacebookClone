@@ -1,0 +1,127 @@
+@use "../../colors";
+@use "../../fonts";
+$nav-height: 56px;
+
+.space-insert {
+  height: $nav-height;
+}
+
+.main-nav {
+  background: colors.$main-nav-color !important;
+  height: $nav-height !important;
+  border-bottom: 1px solid colors.$border-color;
+
+  .facebook-logo {
+    margin-right: 8px;
+  }
+
+  .facebook-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .p361ku9c {
+    fill: colors.$main-text-color;
+  }
+
+  .fill-white {
+    fill: #b0b3b8;
+  }
+
+  .nav-toolbar {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between !important;
+    padding: 0 16px !important;
+  }
+
+  .label-search-all {
+    position: relative;
+
+    .label-search-all input {
+      width: 240px;
+      height: 40px;
+      border-radius: 30px;
+      background-color: colors.$comment-background;
+      border: none;
+      outline: none;
+      padding-left: 40px;
+      font-size: 14px;
+      color: colors.$main-text-color;
+    }
+  }
+
+  .nav-input {
+    width: 240px;
+    height: 40px;
+    background: colors.$comment-background;
+    color: colors.$main-text-color !important;
+    border-radius: 50px;
+    padding: 9px 16px 9px 32px;
+    margin: 0 !important;
+    font-size: 1.25em !important;
+  }
+
+  .nav-search-icon {
+    font-size: 22px !important;
+    position: absolute !important;
+    color: #979ba0 !important;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .left-nav,
+  .right-nav {
+    position: absolute;
+  }
+
+  .right-nav {
+    right: 16px;
+  }
+
+  .nav-center {
+    height: 100%;
+
+    .nav-center > button {
+      height: 100%;
+    }
+
+    .mid-nav-btn {
+      color: #b0b3b8 !important;
+      width: 136px !important;
+      border-radius: 10px !important;
+    }
+
+    .mid-nav-btn:hover {
+      background-color: colors.$comment-background !important;
+    }
+
+    .mid-nav-icon {
+      width: 30px !important;
+      height: 30px !important;
+    }
+  }
+
+  .right-nav-btn {
+    color: colors.$main-text-color !important;
+    background: colors.$comment-background !important;
+    margin-right: 8px !important;
+  }
+
+  .right-nav-btn:last-child {
+    margin-right: 0px !important;
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .css-1t29gy6-MuiToolbar-root {
+    min-height: 100% !important;
+  }
+}
