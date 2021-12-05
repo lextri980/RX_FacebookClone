@@ -1,12 +1,11 @@
 import React from 'react'
 import { Avatar, IconButton } from '@mui/material'
 import user from '../../assets/user.jpg'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import {
     Apps as AppsIcon,
     Notifications as NotificationsIcon,
     ArrowDropDown as ArrowDropDownIcon,
-    ChatBubble as ChatBubbleIcon
 } from '@mui/icons-material';
 export default function RightSideNav() {
     return (
