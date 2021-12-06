@@ -1,5 +1,5 @@
 import MainLayout from "../components/Layout/MainLayout"
-
+import Messenger from "../pages/Messenger/Messenger";
 const routes = () => {
     return [
         // {
@@ -16,7 +16,7 @@ const routes = () => {
             children: [
                 // { path: '/', element: <Homepage/>},
                 // { path: '/profile', element: <Profile /> },
-                // { path: '/messenges', element: <Messenges /> },
+                { path: '/messenges/t/:id', element: <Messenger /> },
                 // { path: '/marketplace', element: <Marketplace /> }
             ]
         }

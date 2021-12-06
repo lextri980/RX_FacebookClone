@@ -3,14 +3,12 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-export default function CustomizedInputBase() {
+export default function CustomizedInputBase(props) {
     return (
         <div style={{ position: 'relative' }}>
             <InputBase
-                className="nav-input"
-                sx={{ ml: 1, flex: 1 }}
-                placeholder="Search Facebook"
-                inputProps={{ 'aria-label': 'search google maps' }}
+                {...props}
+
             />
             <SearchIcon className="nav-search-icon" />
         </div>
