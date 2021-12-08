@@ -9,7 +9,7 @@ import CustomizedInputBase from '../../Navbar/CustomizeInput';
 import EachMessenger from './EachMessenger';
 
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 export default function ListMessenger({ messengers, mainUser }) {
     return (
@@ -27,7 +27,6 @@ export default function ListMessenger({ messengers, mainUser }) {
                     <CustomizedInputBase
                         className="mess-main-input"
                         placeholder="Search Messenger"
-                        inputProps={{ 'aria-label': 'search google maps' }}
                     />
                 </div>
             </div>
@@ -35,9 +34,9 @@ export default function ListMessenger({ messengers, mainUser }) {
                 {messengers.map(m => {
                     return <EachMessenger
                         key={m.id}
+                        id={m.id}
                         otherUser={m.users.find(user => user !== mainUser)}
                         latest={m.messengers[m.messengers.length - 1]}
-                        
                     />
                 })}
             </CardContent>
