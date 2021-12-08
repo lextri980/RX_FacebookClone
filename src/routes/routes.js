@@ -1,4 +1,5 @@
 import MainLayout from "../components/Layout/MainLayout"
+import Marketplace from "../pages/Marketplace/Marketplace";
 
 const routes = () => {
     return [
@@ -17,7 +18,7 @@ const routes = () => {
                 // { path: '/', element: <Homepage/>},
                 // { path: '/profile', element: <Profile /> },
                 // { path: '/messenges/t/:id', element: <Messenges /> },
-                // { path: '/marketplace', element: <Marketplace /> }
+                { path: '/marketplace', element: <Marketplace /> }
             ]
         }
     ]

@@ -1,0 +1,110 @@
+@use '../../colors';
+@use '../../fonts';
+
+.main{
+    display: flex;
+    flex-direction: column;
+    font-size: fonts.$font-size;
+    font-weight: 500;
+    background-color: colors.$main-body-color;
+}
+.menu{
+    background-color: colors.$main-nav-color;
+    position: fixed;
+    width: 360px;
+    height: auto;
+    padding : 5px 12px 5px 12px;
+}
+
+.headerMenu{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #3e4042;
+    padding-bottom: 10px;
+}
+.memuTitle{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+.title{
+    font-size: x-large;
+}
+.settingIcon{
+    // left: 16px;
+    display: flex;
+    margin: auto;
+    width: 36px;
+    height: 36px;
+    background-color: #3a3b3c;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
+.searchBox{
+    height: 40px;
+    width: auto;
+    background-color: #3a3b3c;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+.inputSearch{
+    border: none;
+    outline-width: 0;
+    background-color: #3a3b3c;
+    &:focus{
+        outline: none;
+    }
+}
+
+.bodyMenu{
+    height: 775px;
+    overflow: hidden;
+    &:hover{
+        overflow-y: scroll; 
+    }
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #c1c1c1;
+    border-radius: 25px;
+    
+}
+
+.bodyMenuUp{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #3e4042;
+}
+.itemMenu{
+    box-sizing: border-box;
+    padding-left: 8px;
+    min-height: 44px;
+    display: flex;
+    // margin: auto;
+    // align-items: flex-start;
+    &:hover {
+        background-color: #3a3b3c;
+        cursor: pointer;
+        opacity: 0.6;
+        border-radius: 15px;
+    }
+}
+.itemTitle {
+    margin: auto;
+    flex: 1;
+    padding: 10px;
+}
+.itemIcon {
+    margin: auto;
+}
