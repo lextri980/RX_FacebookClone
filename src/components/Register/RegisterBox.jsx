@@ -83,6 +83,7 @@ function RegisterBox() {
           id="demo-simple-select"
           label="Gender"
           className='register__form--select'
+          size='small'
         >
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
