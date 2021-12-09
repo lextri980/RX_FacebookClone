@@ -1,0 +1,47 @@
+hr {
+  margin: 20px 0;
+  background-color: rgb(240, 240, 240);
+  height: 1px;
+}
+
+.register__form {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  width: 100%;
+  flex-wrap: nowrap;
+
+  .register__form--text1 {
+    width: 200px !important;
+    margin-right: 10px;
+  }
+
+  .register__form--text2 {
+    width: 200px !important;
+    margin-left: 10px;
+  }
+  .register__form--text-long {
+    margin-top: 20px;
+    width: 420px !important;
+  }
+
+  .register__form--span {
+    display: block;
+    width: 100%;
+    margin: 20px 0 10px 10px;
+    color: gray;
+  }
+
+  .register__form--date {
+    width: 125px;
+  }
+
+  .mid {
+    margin: 0 25px;
+  }
+
+  .register__form--select {
+    width: 420px !important;
+  }
+}
