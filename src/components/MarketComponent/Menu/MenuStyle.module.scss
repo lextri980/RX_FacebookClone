@@ -1,36 +1,31 @@
-@use '../../colors';
-@use '../../fonts';
-
-.main{
-    display: flex;
-    flex-direction: column;
-    font-size: fonts.$font-size;
-    font-weight: 500;
-    background-color: colors.$main-body-color;
-}
-.menu{
+@use '../../../colors.scss';
+@use '../../../fonts.scss';
+.menu {
     background-color: colors.$main-nav-color;
     position: fixed;
     width: 360px;
     height: auto;
-    padding : 5px 12px 5px 12px;
+    padding: 5px 12px 5px 12px;
 }
 
-.headerMenu{
+.headerMenu {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #3e4042;
     padding-bottom: 10px;
 }
-.memuTitle{
+
+.memuTitle {
     display: flex;
     flex-direction: row;
     padding-bottom: 10px;
 }
-.title{
+
+.title {
     font-size: x-large;
 }
-.settingIcon{
+
+.settingIcon {
     // left: 16px;
     display: flex;
     margin: auto;
@@ -48,7 +43,8 @@
         opacity: 0.6;
     }
 }
-.searchBox{
+
+.searchBox {
     height: 40px;
     width: auto;
     background-color: #3a3b3c;
@@ -56,37 +52,40 @@
     display: flex;
     align-items: center;
 }
-.inputSearch{
+
+.inputSearch {
     border: none;
     outline-width: 0;
     background-color: #3a3b3c;
-    &:focus{
+    &:focus {
         outline: none;
     }
 }
 
-.bodyMenu{
+.bodyMenu {
     height: 775px;
     overflow: hidden;
-    &:hover{
-        overflow-y: scroll; 
+    &:hover {
+        overflow-y: scroll;
     }
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 8px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: #c1c1c1;
     border-radius: 25px;
-    
 }
 
-.bodyMenuUp{
+.bodyMenuUp {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #3e4042;
 }
-.itemMenu{
+
+.itemMenu {
     box-sizing: border-box;
     padding-left: 8px;
     min-height: 44px;
@@ -106,11 +105,13 @@
         border-radius: 15px;
     }
 }
+
 .itemTitle {
     margin: auto;
     flex: 1;
     padding: 10px;
 }
+
 .itemIcon {
     margin: auto;
 }

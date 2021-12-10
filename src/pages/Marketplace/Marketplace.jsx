@@ -1,133 +1,133 @@
 import React from 'react'
-import { Scrollbars } from 'react-custom-scrollbars';
-import { Link } from "react-router-dom";
-import SettingsIcon from '@mui/icons-material/Settings';
-import SearchIcon from '@mui/icons-material/Search';
+// import { Scrollbars } from 'react-custom-scrollbars';
+// import { Link } from "react-router-dom";
+// import SettingsIcon from '@mui/icons-material/Settings';
+// import SearchIcon from '@mui/icons-material/Search';
 import styles from './marketStyle.module.scss'
-import StorefrontIcon from '@mui/icons-material/Storefront';
-import LiveTvIcon from '@mui/icons-material/LiveTv';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import SellIcon from '@mui/icons-material/Sell';
-import AddIcon from '@mui/icons-material/Add';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import HouseIcon from '@mui/icons-material/House';
-import ConstructionIcon from '@mui/icons-material/Construction';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import CameraIndoorIcon from '@mui/icons-material/CameraIndoor';
-import YardIcon from '@mui/icons-material/Yard';
-import MusicVideoIcon from '@mui/icons-material/MusicVideo';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import LoyaltyIcon from '@mui/icons-material/Loyalty';
-import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
-import BorderColorIcon from '@mui/icons-material/BorderColor';
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import CountertopsIcon from '@mui/icons-material/Countertops';
-import CheckroomIcon from '@mui/icons-material/Checkroom';
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import GroupIcon from '@mui/icons-material/Group';
+// import StorefrontIcon from '@mui/icons-material/Storefront';
+// import LiveTvIcon from '@mui/icons-material/LiveTv';
+// import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+// import DraftsIcon from '@mui/icons-material/Drafts';
+// import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+// import SellIcon from '@mui/icons-material/Sell';
+// import AddIcon from '@mui/icons-material/Add';
+// import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+// import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+// import HouseIcon from '@mui/icons-material/House';
+// import ConstructionIcon from '@mui/icons-material/Construction';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
+// import CameraIndoorIcon from '@mui/icons-material/CameraIndoor';
+// import YardIcon from '@mui/icons-material/Yard';
+// import MusicVideoIcon from '@mui/icons-material/MusicVideo';
+// import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+// import LoyaltyIcon from '@mui/icons-material/Loyalty';
+// import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
+// import BorderColorIcon from '@mui/icons-material/BorderColor';
+// import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+// import CountertopsIcon from '@mui/icons-material/Countertops';
+// import CheckroomIcon from '@mui/icons-material/Checkroom';
+// import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+// import GroupIcon from '@mui/icons-material/Group';
+import SideBarLeft from '../../components/MarketComponent/Menu/SideBarLeft';
 
 const Marketplace = () => {
     return (
         <div className={styles.main}>
-            {/* <Scrollbars style={{width: '100%', height:'100%'}}> */}
-                <div className={styles.menu}>
-                    <div className={styles.headerMenu}>
-                        <div className={styles.memuTitle}>
-                            <h3 className={styles.title}>Marketplace</h3>
-                            <div className={styles.settingIcon}>
-                                <SettingsIcon />
-                            </div>
-                        </div>
-                        <div className={styles.searchBox}>
-                            <SearchIcon  />
-                            <input type="text" className={styles.inputSearch} name="" id="" placeholder='Tìm kiếm trên Marketplace'/>
+            {/* <div className={styles.menu}>
+                <div className={styles.headerMenu}>
+                    <div className={styles.memuTitle}>
+                        <h3 className={styles.title}>Marketplace</h3>
+                        <div className={styles.settingIcon}>
+                            <SettingsIcon />
                         </div>
                     </div>
-                    <div className={styles.bodyMenu}>
-                        <div className={styles.bodyMenuUp}>
-                            <Link to='/marketplace'>
-                                <div className={styles.itemMenu}>
-                                    <div className={styles.itemIcon}>
-                                        <StorefrontIcon />
-                                    </div>
-                                    <div className={styles.itemTitle}>
-                                        Lướt xem tất cả
-                                    </div>
+                    <div className={styles.searchBox}>
+                        <SearchIcon />
+                        <input type="text" className={styles.inputSearch} name="" id="" placeholder='Tìm kiếm trên Marketplace' />
+                    </div>
+                </div>
+                <div className={styles.bodyMenu}>
+                    <div className={styles.bodyMenuUp}>
+                        <Link to='/marketplace'>
+                            <div className={styles.itemMenu}>
+                                <div className={styles.itemIcon}>
+                                    <StorefrontIcon />
                                 </div>
-                            </Link>
-                            <Link to='/marketplace/live-shopping'>
-                                <div className={styles.itemMenu}>
-                                    <div className={styles.itemIcon}>
-                                        <LiveTvIcon />
-                                    </div>
-                                    <div className={styles.itemTitle}>
-                                        Mua sắm trực tiếp
-                                    </div>
+                                <div className={styles.itemTitle}>
+                                    Lướt xem tất cả
                                 </div>
-                            </Link>
-                            <Link to='/marketplace/notifications'>
-                                <div className={styles.itemMenu}>
-                                    <div className={styles.itemIcon}>
-                                        <NotificationsActiveIcon />
-                                    </div>
-                                    <div className={styles.itemTitle}>
-                                        Thông báo
-                                    </div>
+                            </div>
+                        </Link>
+                        <Link to='/marketplace/live-shopping'>
+                            <div className={styles.itemMenu}>
+                                <div className={styles.itemIcon}>
+                                    <LiveTvIcon />
                                 </div>
-                            </Link>
-                            <Link to='/marketplace/inbox'>
-                                <div className={styles.itemMenu}>
-                                    <div className={styles.itemIcon}>
-                                        <DraftsIcon />
-                                    </div>
-                                    <div className={styles.itemTitle}>
-                                        Hộp thư
-                                    </div>
+                                <div className={styles.itemTitle}>
+                                    Mua sắm trực tiếp
                                 </div>
-                            </Link>
-                            <Link to='/marketplace/you'>
-                                <div className={styles.itemMenu}>
-                                    <div className={styles.itemIcon}>
-                                        <ShoppingBagIcon />
-                                    </div>
-                                    <div className={styles.itemTitle}>
-                                        Đang mua
-                                    </div>
+                            </div>
+                        </Link>
+                        <Link to='/marketplace/notifications'>
+                            <div className={styles.itemMenu}>
+                                <div className={styles.itemIcon}>
+                                    <NotificationsActiveIcon />
                                 </div>
-                            </Link>
-                            <Link to='/marketplace/you/selling'>
-                                <div className={styles.itemMenu}>
-                                    <div className={styles.itemIcon}>
-                                        <SellIcon />
-                                    </div>
-                                    <div className={styles.itemTitle}>
-                                        Đang bán
-                                    </div>
+                                <div className={styles.itemTitle}>
+                                    Thông báo
                                 </div>
-                            </Link>
-                            <Link to='/'>
-                                <div className={styles.itemMenu}>
-                                    <div className={styles.itemIcon}>
-                                        <AddIcon />
-                                    </div>
-                                    <div className={styles.itemTitle}>
-                                        Thêm bài niêm yết mới
-                                    </div>
+                            </div>
+                        </Link>
+                        <Link to='/marketplace/inbox'>
+                            <div className={styles.itemMenu}>
+                                <div className={styles.itemIcon}>
+                                    <DraftsIcon />
                                 </div>
-                            </Link>
-                        </div>
+                                <div className={styles.itemTitle}>
+                                    Hộp thư
+                                </div>
+                            </div>
+                        </Link>
+                        <Link to='/marketplace/you'>
+                            <div className={styles.itemMenu}>
+                                <div className={styles.itemIcon}>
+                                    <ShoppingBagIcon />
+                                </div>
+                                <div className={styles.itemTitle}>
+                                    Đang mua
+                                </div>
+                            </div>
+                        </Link>
+                        <Link to='/marketplace/you/selling'>
+                            <div className={styles.itemMenu}>
+                                <div className={styles.itemIcon}>
+                                    <SellIcon />
+                                </div>
+                                <div className={styles.itemTitle}>
+                                    Đang bán
+                                </div>
+                            </div>
+                        </Link>
+                        <Link to='/'>
+                            <div className={styles.itemMenu}>
+                                <div className={styles.itemIcon}>
+                                    <AddIcon />
+                                </div>
+                                <div className={styles.itemTitle}>
+                                    Thêm bài niêm yết mới
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
                     <div className={styles.bodyMenuDown}>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <DirectionsCarIcon  />
+                                <DirectionsCarIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Xe cộ
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
                                 <AttachMoneyIcon />
@@ -135,7 +135,7 @@ const Marketplace = () => {
                             <div className={styles.itemTitle}>
                                 Tài sản cho thuê
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
                                 <HouseIcon />
@@ -143,7 +143,7 @@ const Marketplace = () => {
                             <div className={styles.itemTitle}>
                                 Bán nhà
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
                                 <ConstructionIcon />
@@ -151,123 +151,123 @@ const Marketplace = () => {
                             <div className={styles.itemTitle}>
                                 Dụng cụ sửa chữa nhà cửa
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
                                 <FavoriteIcon />
                             </div>
                             <div className={styles.itemTitle}>
-                                Gia đình 
+                                Gia đình
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <CameraIndoorIcon  />
+                                <CameraIndoorIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Giải trí
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <YardIcon  />
+                                <YardIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Làm vườn và hoạt động ngoài trời
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <MusicVideoIcon  />
+                                <MusicVideoIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Nhạc cụ
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <LocalOfferIcon  />
+                                <LocalOfferIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Rao vặt
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <LoyaltyIcon  />
+                                <LoyaltyIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Sản phẩm miễn phí
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <SportsSoccerIcon  />
+                                <SportsSoccerIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Sản phẩm thể thao
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <BorderColorIcon  />
+                                <BorderColorIcon />
                             </div>
                             <div className={styles.itemTitle}>
-                                Sở thích  
+                                Sở thích
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <LocalOfferIcon  />
+                                <LocalOfferIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Văn phòng phẩm
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <SportsEsportsIcon  />
+                                <SportsEsportsIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Đồ chơi và trò chơi
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <CountertopsIcon  />
+                                <CountertopsIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Đồ gia dụng
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <CheckroomIcon  />
+                                <CheckroomIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Đồ may mặc
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
-                                <PhoneIphoneIcon  />
+                                <PhoneIphoneIcon />
                             </div>
                             <div className={styles.itemTitle}>
                                 Đồ điện tử
                             </div>
-                        </div>                    
+                        </div>
                         <div className={styles.itemMenu}>
                             <div className={styles.itemIcon}>
                                 <GroupIcon />
                             </div>
                             <div className={styles.itemTitle}>
-                                Nhóm mua và bán  
+                                Nhóm mua và bán
                             </div>
-                        </div>                                
+                        </div>
                     </div>
                 </div>
-                </div>
-            {/* </Scrollbars> */}
+            </div> */}
+            <SideBarLeft />
         </div>
     )
 }
