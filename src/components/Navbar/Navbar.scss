@@ -76,6 +76,22 @@ $nav-height: 56px;
     position: absolute;
   }
 
+  .left-nav {
+    .left-nav-menu {
+      display: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 10px !important;
+      margin-left: 15px;
+    }
+    .left-nav-menu-icon {
+      fill: colors.$secondary-text-color !important;
+    }
+    .left-nav-menu:hover {
+      background-color: colors.$comment-background;
+    }
+  }
+
   .right-nav {
     right: 16px;
   }
@@ -120,8 +136,105 @@ $nav-height: 56px;
   }
 }
 
+.nav-notification {
+  ul {
+    background-color: colors.$main-nav-color;
+
+  }
+
+  .nav-notification-filter-btn {
+    color: colors.$main-text-color;
+    padding: 0;
+    border-radius: 18px;
+    background-color: #ffffff1a;
+    text-transform: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border: none;
+    margin-right: 8px;
+  }
+
+  .active {
+    background-color: #2d88ff33 !important;
+    color: colors.$blue-text-color !important;
+  }
+
+  .nav-notification-item {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 10px 2px 6px;
+    padding: 6px 6px;
+    border-radius: 10px;
+    p {
+      font-size: 1.2em;
+      color: colors.$secondary-text-color !important;
+    }
+
+    .nav-notification-item-time {
+      font-size: 1em;
+    }
+  }
+
+  .nav-notification-item:hover {
+    background-color: colors.$comment-background;
+  }
+}
+
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::-webkit-scrollbar-thumb {
+  background: #828383a6 !important;
+  border-radius: 10px;
+}
+
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::-webkit-scrollbar-track {
+  background: colors.$main-nav-color !important;
+}
 @media (min-width: 600px) {
   .css-1t29gy6-MuiToolbar-root {
     min-height: 100% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-input {
+    width: 22px !important;
+    padding: 9px 8px 9px 32px !important;
+  }
+
+  .nav-avatar-area {
+    display: none !important;
+  }
+
+  .main-nav {
+    .nav-center {
+      .mid-nav-btn {
+        width: 90px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-nav {
+    .nav-center {
+      .mid-nav-btn {
+        width: 70px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .left-nav {
+    .left-nav-menu {
+      display: block !important;
+    }
+  }
+
+  .nav-center {
+    display: none !important;
   }
 }

@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export default function CustomizedInputBase() {
     return (
-        <div style={{ position: 'relative' }}>
+        <div className="nav-search-area " style={{ position: 'relative' }}>
             <InputBase
                 className="nav-input"
                 sx={{ ml: 1, flex: 1 }}
