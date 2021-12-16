@@ -1,0 +1,37 @@
+.card__messenger {
+    display: flex;
+    max-width: 345px;
+    max-height: 65px;
+    margin-top: 5px;
+    &:hover{
+        opacity: 0.6;
+        cursor: pointer;
+        background-color: #677077;
+        border-radius: 10px;
+    }
+}
+
+.card__messenger-avatar {
+    max-width: 56px;
+    max-height: 56px;
+}
+
+.card__messenger-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0 5px 5px;
+}
+
+.card__messenger-content-title {
+    text-align: left;
+    flex: 1;
+    margin: 0;
+}
+
+.card__messenger-content-text {
+    flex: 1;
+    text-align: left;
+    max-height: calc(100% / 2);
+    font-size: 13px;
+    width: 100%;
+}

@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import { MessengerPopupContext } from './components/Navbar/PopupMessenger/store/MessengerPopupContext';
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <MessengerPopupContext>
+      <App />
+    </MessengerPopupContext>
   </BrowserRouter>
   ,
   document.getElementById('root')
