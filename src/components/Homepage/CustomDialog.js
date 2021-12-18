@@ -25,8 +25,6 @@ const CustomDialog = ({ isOpen, setIsOpen }) => {
     }
   };
 
-  const withImg = `${file ? ''}`;
-
   return (
     <Dialog open={isOpen} onClose={handleCloseDialog}>
       <DialogTitle sx={{ textAlign: "center" }}>Tạo bài viết</DialogTitle>
