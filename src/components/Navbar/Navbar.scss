@@ -76,6 +76,22 @@ $nav-height: 56px;
     position: absolute;
   }
 
+  .left-nav {
+    .left-nav-menu {
+      display: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 10px !important;
+      margin-left: 15px;
+    }
+    .left-nav-menu-icon {
+      fill: colors.$secondary-text-color !important;
+    }
+    .left-nav-menu:hover {
+      background-color: colors.$comment-background;
+    }
+  }
+
   .right-nav {
     right: 16px;
   }
@@ -123,5 +139,46 @@ $nav-height: 56px;
 @media (min-width: 600px) {
   .css-1t29gy6-MuiToolbar-root {
     min-height: 100% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-input {
+    width: 22px !important;
+    padding: 9px 8px 9px 32px !important;
+  }
+
+  .nav-avatar-area {
+    display: none !important;
+  }
+
+  .main-nav {
+    .nav-center {
+      .mid-nav-btn {
+        width: 90px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-nav {
+    .nav-center {
+      .mid-nav-btn {
+        width: 70px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .left-nav {
+    .left-nav-menu {
+      display: block !important;
+    }
+  }
+
+  .nav-center {
+    display: none !important;
   }
 }
