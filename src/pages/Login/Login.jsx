@@ -1,16 +1,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Button, FormControl, TextField } from "@mui/material";
 import React, { useState } from "react";
-import "./Login.scss";
-import { FormControl, TextField, Button } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 import Register from "../Register/Register";
+import "./Login.scss";
 
 function Login() {
+  //Local State
   const [openModal, setOpenModal] = useState(false);
 
+  //Navigate
+  const navigate = useNavigate()
+
+  //handleOpenModal()
   const handleOpenModal = () => {
     setOpenModal(true);
   };
 
+  //handleSubmitLogin()
+  const handleSubmitLogin = () => {
+    navigate('/')
+  }
+
+  //handleCloseModal()
   const handleCloseModal = () => {
     setOpenModal(false)
   }
@@ -36,7 +48,7 @@ function Login() {
               label="Password"
               variant="outlined"
             />
-            <Button className="login__form--btn" variant="contained">
+            <Button className="login__form--btn" variant="contained" onClick={handleSubmitLogin}>
               Login
             </Button>
             <div className="login__form--fotter">

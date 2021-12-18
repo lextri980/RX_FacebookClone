@@ -6,6 +6,7 @@ import {
   TextField,
   Select,
   MenuItem,
+  Button,
 } from "@mui/material";
 import "../../pages/Register/Register.scss";
 
@@ -82,13 +83,19 @@ function RegisterBox() {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           label="Gender"
-          className='register__form--select'
-          size='small'
+          className="register__form--select"
+          size="small"
         >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value="Male">Male</MenuItem>
+          <MenuItem value="Female">Female</MenuItem>
+          <MenuItem value="Other">Other</MenuItem>
         </Select>
+        <span className="register__form--span">
+          By clicking Sign Up, you agree to our Terms, Data Policy and Cookie
+          Policy. You may receive SMS notifications from us and can opt out at
+          any time.
+        </span>
+        <Button color='success' variant='contained' className="register__form--btn-signup">Sign Up</Button>
       </FormControl>
     </Box>
   );
