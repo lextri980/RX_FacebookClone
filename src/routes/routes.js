@@ -1,15 +1,17 @@
 import MainLayout from "../components/Layout/MainLayout"
+import Login from '../pages/Login/Login'
+import Register from '../pages/Register/Register'
 
 const routes = () => {
     return [
-        // {
-        //     path:'/login',
-        //     element: <Login/>
-        // },
-        // {
-        //     path:'/register',
-        //     element: <Register/>
-        // },
+        {
+            path:'/login',
+            element: <Login/>
+        },
+        {
+            path:'/register',
+            element: <Register/>
+        },
         {
             path: '/',
             element: <MainLayout />,
