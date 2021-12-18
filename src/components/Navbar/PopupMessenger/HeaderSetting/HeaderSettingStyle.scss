@@ -1,0 +1,44 @@
+@use '../../../../colors.scss';
+@use '../../../../fonts.scss';
+
+.header__seting {
+    width: 350px;
+    height: auto;
+    background-color: #242526;
+    color: colors.$main-text-color;
+    font-size: fonts.$font-size;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__setting-top{
+    width: inherit;
+    display: inline-block;
+    padding: 5px 5px 10px 0;
+    border-bottom: 1px solid #3e4042;
+}
+.header__setting-body-one{
+    margin-bottom: 5px;
+}
+.header__setting-body-item{
+    height: 43px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .title {
+        flex: 1;
+        padding: 0 0 0 5px;
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: #677077;
+        opacity: 0.9;
+        color: colors.$main-text-color;
+        border-radius: 5px;
+    }
+}
+.header__setting-body-two{
+    margin-top: 5px;
+    border-top: 1px solid #3e4042;
+}
