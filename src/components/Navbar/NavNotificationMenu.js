@@ -1,7 +1,10 @@
-import { Menu, MenuItem, Typography, Button, Avatar } from '@mui/material'
+import { Menu, Typography, Avatar, IconButton } from '@mui/material'
+import { MoreHoriz as MoreIcon } from '@mui/icons-material'
 import React from 'react'
 import user from '../../assets/user.jpg'
-
+import NotificationSettingMenu from './NotificationSettingMenu'
+import './Notification.scss'
+import NavNotiItem from './NavNotiItem'
 const sample_data = [
     {
         user: 'Dennis Nguyen',
@@ -55,6 +58,19 @@ const sample_data = [
 
 
 export default function NavNotificationMenu({ anchorEl, open, handleClose }) {
+
+
+    const [anchorElSetting, setAnchorElSetting] = React.useState(null);
+    const openSetting = Boolean(anchorElSetting);
+
+    const handleNotiSettingClick = (e) => {
+        setAnchorElSetting(e.currentTarget);
+    }
+
+    const handleNotiSettingClose = () => {
+        setAnchorElSetting(null);
+    };
+
     return (
         <Menu
             id="basic-menu"
@@ -67,8 +83,11 @@ export default function NavNotificationMenu({ anchorEl, open, handleClose }) {
             className="nav-notification"
         >
             <div style={{ width: '380px' }}>
-                <div style={{ padding: '6px 16px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 16px' }}>
                     <Typography variant='h5'><b>Notifications</b></Typography>
+                    <IconButton onClick={handleNotiSettingClick}>
+                        <MoreIcon sx={{ color: '#b0b3b8' }} />
+                    </IconButton>
                 </div>
                 <div style={{ padding: '2px 16px' }}>
                     <button className="nav-notification-filter-btn active">
@@ -83,18 +102,17 @@ export default function NavNotificationMenu({ anchorEl, open, handleClose }) {
                 </div>
                 {
                     sample_data.map(data => {
-                        return <div className="nav-notification-item" >
-                            <div>
-                                <Avatar alt="avatar" src={user} sx={{ width: 56, height: 56, marginRight: '10px' }} />
-                            </div>
-                            <div>
-                                <Typography><b>{data.user}</b> {data.action}<b> {data.destination}</b></Typography>
-                                <Typography className="nav-notification-item-time">{data.date.toDateString()}</Typography>
-                            </div>
-                        </div>
+                        return <NavNotiItem data={data}/>
                     })
                 }
             </div>
+            <NotificationSettingMenu
+                anchorEl={anchorElSetting}
+                open={openSetting}
+                handleClose={handleNotiSettingClose}
+            />
         </Menu >
     )
 }
+
+
