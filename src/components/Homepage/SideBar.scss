@@ -14,10 +14,12 @@
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
 
     .sb__head-Icon {
       margin-left: 5px;
+      color: white;
 
       &:first-child {
         margin-left: unset;

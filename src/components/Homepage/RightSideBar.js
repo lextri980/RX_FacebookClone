@@ -5,6 +5,7 @@ import SideBarOption from "./SideBarOption";
 import VideoCallIcon from "@mui/icons-material/VideoCall";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import { IconButton } from "@mui/material";
 
 // Styles
 import "./SideBar.scss";
@@ -15,9 +16,17 @@ export default function RightSideBar() {
       <div className="sb__head">
         <h3>Người liên hệ</h3>
         <div>
-          <VideoCallIcon className="sb__head-Icon" />
-          <SearchIcon className="sb__head-Icon" />
-          <MoreHorizIcon className="sb__head-Icon" />
+          <IconButton>
+            <VideoCallIcon className="sb__head-Icon" />
+          </IconButton>
+
+          <IconButton>
+            <SearchIcon className="sb__head-Icon" />
+          </IconButton>
+
+          <IconButton>
+            <MoreHorizIcon className="sb__head-Icon" />
+          </IconButton>
         </div>
       </div>
 

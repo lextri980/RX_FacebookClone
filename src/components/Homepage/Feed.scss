@@ -1,6 +1,88 @@
 @use "../../fonts.scss";
 @use "../../colors.scss";
 
+.like {
+  color: rgb(32, 120, 244);
+}
+
+.love {
+  color: rgb(243, 62, 88);
+}
+
+.haha {
+  color: rgb(247, 177, 37);
+}
+
+.sad {
+  color: rgb(247, 177, 37);
+}
+
+.wow {
+  color: rgb(247, 177, 37);
+}
+
+.angry {
+  color: rgb(233, 113, 15);
+}
+
+.inactive {
+  color: colors.$main-text-color;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.MuiDialog-paper {
+  background-color: #242526 !important;
+  border-radius: 10px !important;
+  width: 100%;
+
+  font-family: 'Roboto';
+
+  .upload__dialog {
+    padding: 15px;
+
+    .upload__dialog-top {
+      display: flex;
+      align-items: center;
+    }
+
+    .upload__dialog-body {
+      width: 100%;
+      margin-top: 10px;
+
+      overflow: auto;
+
+      .upload__dialog-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-family: 'Roboto';
+        color: white;
+        font-size: 1.5rem;
+        resize: none;
+      }
+    }
+
+    .upload__dialog-bottom {
+      .upload__dialog-options {
+        margin: 15px 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border: 1px solid #3e4042;
+        box-shadow: 0 1px 2px rgba(255,255,255, 0.05);
+        border-radius: 8px;
+
+      }
+    }
+  }
+}
+
 .feed {
   margin: 0 auto;
   display: flex;
@@ -34,7 +116,11 @@
         overflow: hidden;
 
         object-fit: cover;
-        background-image: linear-gradient(0deg, colors.$main-nav-color, transparent);
+        background-image: linear-gradient(
+          0deg,
+          colors.$main-nav-color,
+          transparent
+        );
         transition: all 0.2s ease-in-out;
         border-radius: 10px;
       }
@@ -84,23 +170,20 @@
 
       border-bottom: 1px solid colors.$border-color;
 
-      .uploadBar__input {
+      .uploadBar__button {
         flex: 1;
         display: flex;
         margin-left: 15px;
+        padding: 12px;
 
         background-color: colors.$comment-background;
         align-items: center;
         border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s;
 
-        input {
-          width: 100%;
-          padding: 12px;
-
-          border: none;
-          background: transparent;
-          outline: none;
-          color: white;
+        &:hover {
+          background-color: #4a4b4d;
         }
       }
     }
@@ -149,7 +232,7 @@
     flex-direction: column;
     margin-top: 20px;
 
-    background-color: #242526;
+    background-color: colors.$main-nav-color;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     box-sizing: border-box;
@@ -194,11 +277,33 @@
       justify-content: space-evenly;
       padding: 5px 0;
 
+      .post__reaction {
+        position: relative;
+
+        .post__reaction-bar {
+          background-color: colors.$main-nav-color;
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 2px 2px rgba(0, 0, 0, .15);
+          display: flex;
+          list-style: none;
+          border-radius: 30px;
+          transition: all 0.2s 0.2s;
+          position: absolute;
+          left: -50px;
+          bottom: calc(100% + 4px);
+          z-index: 999;
+
+          .post__rection-iconContainer {
+            // padding: 6px 4px 0px;
+            cursor: pointer;
+          }
+        }
+      }
+
       .post__bottom-action {
         display: flex;
         align-items: center;
         padding: 5px 20px;
-        
+
         cursor: pointer;
         border-radius: 10px;
         transition: all 0.2s;
@@ -215,7 +320,6 @@
         }
       }
     }
-    
   }
 
   @media screen and (max-width: 768px) {

@@ -2,10 +2,11 @@ import React from "react";
 
 import { Avatar } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-
-import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
+import { IconButton } from "@mui/material";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ReplyIcon from "@mui/icons-material/Reply";
+
+import ReactionBar from "./ReactionBar";
 
 export default function Post({ image }) {
   return (
@@ -19,7 +20,9 @@ export default function Post({ image }) {
           </div>
         </div>
 
-        <MoreHorizIcon style={{ cursor: "pointer" }} />
+        <IconButton>
+          <MoreHorizIcon style={{ cursor: "pointer", color: 'white' }} />
+        </IconButton>
       </div>
 
       <div className="post__body">
@@ -32,14 +35,11 @@ export default function Post({ image }) {
           posting this but people seemed to like it so hey here we are: number
           92
         </p>
-        {image && <img className="post__body-image" src={image} />}
+        {image && <img className="post__body-image" src={image} alt="" />}
       </div>
 
       <div className="post__bottom">
-        <div className="post__bottom-action">
-          <ThumbUpOutlinedIcon className="post__bottom-icon" />
-          <p>Thích</p>
-        </div>
+        <ReactionBar />
 
         <div className="post__bottom-action">
           <ChatBubbleOutlineOutlinedIcon className="post__bottom-icon" />

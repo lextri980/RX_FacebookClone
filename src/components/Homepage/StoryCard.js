@@ -9,7 +9,7 @@ import { StyledBadge } from "./StyledBadge";
 export default function StoryCard({ avatar, image, name }) {
   return (
     <div className="story__card">
-      <img src={image} className="story__cardImage" />
+      <img src={image} className="story__cardImage" alt=''/>
       {avatar ? (
         <StyledBadge
           className="story__cardProfile"
