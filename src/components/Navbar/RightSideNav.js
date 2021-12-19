@@ -8,6 +8,7 @@ import {
 } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 import NavNotificationMenu from './NavNotificationMenu';
+import { Link } from 'react-router-dom';
 export default function RightSideNav() {
 
     const [anchorElNoti, setAnchorElNoti] = React.useState(null);
@@ -32,10 +33,10 @@ export default function RightSideNav() {
 
     return (
         <div className="right-nav flex-center">
-            <a href="/" className="nav-avatar-area flex-center" style={{ marginRight: '12px' }}>
+            <Link to="/profile" className="nav-avatar-area flex-center" style={{ marginRight: '12px' }}>
                 <Avatar alt="avatar" src={user} sx={{ width: 28, height: 28, marginRight: '5px' }} />
                 <Typography style={{ fontSize: '1.17em' }}>User</Typography>
-            </a>
+            </Link>
             <IconButton className="right-nav-btn"><AppsIcon /></IconButton>
             <IconButton className="right-nav-btn">
                 <StyledBadge color="secondary" badgeContent={1} max={20}>
