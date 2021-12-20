@@ -1,0 +1,99 @@
+@use "../../colors";
+@use "../../fonts";
+body {
+  overflow: auto !important;
+}
+
+.main-stories-page {
+  height: 100vh;
+  background-color: #000000;
+  position: relative;
+
+  .main-stories-homepage-redirect {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    margin-left: 16px;
+    margin-top: 8px;
+    .facebook-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .fill-white {
+      fill: #b0b3b8;
+    }
+  }
+
+  .main-stories-nav-menu {
+    .right-nav {
+      position: fixed;
+      right: 33px;
+      top: 8px;
+    }
+
+    .nav-avatar-area {
+      display: none !important;
+    }
+
+    .right-nav-btn {
+      color: colors.$main-text-color !important;
+      background: colors.$comment-background !important;
+      margin-right: 8px !important;
+    }
+
+    .right-nav-btn:last-child {
+      margin-right: 0px !important;
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .p361ku9c {
+    fill: colors.$main-text-color;
+  }
+
+  .stories-reaction-icon {
+    width: 50px;
+  }
+
+  .main-stories-input {
+    width: 300px;
+    height: 40px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding-left: 15px;
+    font-size: 1.2em;
+    color: white;
+    margin-right: 10px;
+    outline: none;
+  }
+
+  .main-stories-center {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .main-stories-display {
+      margin: 12px 0 8px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      div {
+        width: 400px;
+        height: 100%;
+        background-color: rgb(41, 41, 41);
+        border-radius: 5px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

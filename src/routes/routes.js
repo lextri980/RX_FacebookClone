@@ -1,6 +1,6 @@
 import MainLayout from "../components/Layout/MainLayout";
 import Homepage from "../pages/Homepage/Homepage";
-
+import Stories from "../pages/Stories/Stories";
 const routes = () => {
     return [
         // {
@@ -12,11 +12,14 @@ const routes = () => {
         //     element: <Register/>
         // },
         {
+            path: '/stories/:id',
+            element: <Stories />
+        },
+        {
             path: '/',
             element: <MainLayout />,
             children: [
-                { path: '/', element: <Homepage/>},
-                // { path: '/profile', element: <Profile /> },
+                { path: '/', element: <Homepage /> },
                 // { path: '/messenges/t/:id', element: <Messenges /> },
                 // { path: '/marketplace', element: <Marketplace /> }
             ]
