@@ -6,8 +6,8 @@ import {
     ArrowBackIosNewRounded as ArrowBackIcon,
     ArrowForwardIosRounded as ArrowFowardIcon,
     PlayArrow as PlayArrowIcon,
-    Pause as PauseIcon,
-    VolumeDown as VolumneDownIcon,
+    // Pause as PauseIcon,
+    // VolumeDown as VolumneDownIcon,
     VolumeOff as VolumeOffIcon,
     MoreHoriz as MoreIcon
 } from '@mui/icons-material'
