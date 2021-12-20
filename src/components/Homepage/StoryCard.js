@@ -5,7 +5,6 @@ import { Avatar } from "@mui/material";
 
 // Components
 import { StyledBadge } from "./StyledBadge";
-import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router';
 export default function StoryCard({ avatar, image, name, index, data }) {
   const navigate = useNavigate();
