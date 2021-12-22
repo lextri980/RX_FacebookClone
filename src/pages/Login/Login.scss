@@ -35,6 +35,19 @@
       margin: 20px 0;
     }
 
+    .login__form--textfield-password {
+      position: relative;
+    }
+
+    .login__form--textfield-password-reveal {
+      position: absolute;
+      right: 20px;
+      top: 112px;
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+    }
+
     .login__form--btn {
       margin: 20px 0;
       height: 45px;
@@ -60,7 +73,7 @@
         }
       }
 
-      hr{
+      hr {
         width: 320px;
         background-color: rgb(223, 223, 223);
       }
@@ -71,5 +84,4 @@
       }
     }
   }
-
 }
