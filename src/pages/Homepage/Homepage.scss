@@ -1,0 +1,9 @@
+@use "../../colors";
+@use "../../fonts";
+
+.homepage {
+  background-color: colors.$main-body-color;
+  font-family: 'Roboto';
+
+  display: flex;
+}
