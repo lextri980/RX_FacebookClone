@@ -6,9 +6,9 @@ function App() {
   const content = useRoutes(routes());
 
   return (
-    <div className="App">
-      {content}
-    </div>
+      <div className="App">
+        {content}
+      </div>
   );
 }
 

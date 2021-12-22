@@ -1,0 +1,87 @@
+@use "../../colors.scss";
+
+.login {
+  font-family: Helvetica, Arial, sans-serif;
+  height: 100vh;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login__title {
+    font-size: 60px;
+    width: 550px;
+    font-weight: 600;
+    color: colors.$blue-logo;
+    margin-right: 40px;
+
+    p {
+      font-size: 24px;
+      color: black;
+      font-weight: 500;
+    }
+  }
+
+  .login__form {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    margin-left: 40px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+
+    .login__form--textfield-username {
+      margin: 20px 0;
+    }
+
+    .login__form--textfield-password {
+      position: relative;
+    }
+
+    .login__form--textfield-password-reveal {
+      position: absolute;
+      right: 20px;
+      top: 112px;
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+    }
+
+    .login__form--btn {
+      margin: 20px 0;
+      height: 45px;
+      text-transform: none;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .login__form--fotter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+        color: colors.$blue-logo !important;
+        padding-bottom: 20px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      hr {
+        width: 320px;
+        background-color: rgb(223, 223, 223);
+      }
+
+      .login__form--btn-register {
+        background-color: #42b72a;
+        width: 230px !important;
+      }
+    }
+  }
+}
