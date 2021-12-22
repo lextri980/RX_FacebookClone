@@ -1,6 +1,5 @@
 .messenger {
     display: flex;
-    // position: relative;
     flex-direction: column;
     width: 365px;
     height: 800px;
@@ -13,7 +12,7 @@
     }
 }
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -22,7 +21,7 @@
 }
 
 .messenger__title {
-    width: 345px;
+    width: 340px;
     display: flex;
     justify-content: space-between;
     align-self: center;

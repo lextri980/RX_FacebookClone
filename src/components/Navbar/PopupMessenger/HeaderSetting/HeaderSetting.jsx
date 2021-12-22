@@ -12,25 +12,25 @@ const HeaderSetting = () => {
     return (
         <div className='header__seting'>
             <div className="header__setting-top">
-                <h2>Cài đặt chat</h2>
-                <p>tùy chỉnh trải nghiệm trên Messenger.</p>
+                <h2>Chat settings</h2>
+                <p>Customize your Messenger experience</p>
             </div>
             <div className="header__setting-body-one">
                 <div className="header__setting-body-item">
                     <PhoneCallbackIcon />
-                    <h2 className='title'>Âm thanh cuộc gọi đến</h2>
+                    <h2 className='title'>Incoming call sounds</h2>
                     <BasicSwitch />
                 </div>
                 <div className="header__setting-body-item">
                     <VolumeDownIcon />
-                    <h2 className='title'>Âm thanh tin nhắn</h2>
+                    <h2 className='title'>Message sounds</h2>
                     <BasicSwitch />
                 </div>
                 <div className="header__setting-body-item">
                     <DynamicFeedIcon />
                     <div className="title">
-                        <h2 >Tin nhắn mới lên</h2>
-                        <p>tự động mở tin nhắn mới</p>
+                        <h2 >Pop-up new messages</h2>
+                        <p>Automatically open new messages</p>
                     </div>
                     <BasicSwitch />
                 </div>
@@ -38,19 +38,19 @@ const HeaderSetting = () => {
             <div className="header__setting-body-two">
                 <div className="header__setting-body-item">
                     <CircleNotificationsIcon/>
-                    <h2 className="title">Tắt trạng thái hoạt động</h2>
+                    <h2 className="title">Turn off Active Status</h2>
                 </div>
                 <div className="header__setting-body-item">
                     <ChatIcon/>
-                    <h2 className="title">tin nhắn chờ</h2>
+                    <h2 className="title">Message requests</h2>
                 </div>
                 <div className="header__setting-body-item">
                     <DisplaySettingsIcon />
-                    <h2 className="title">cài đặt gửi tin nhắn</h2>
+                    <h2 className="title">Message delivery settings</h2>
                 </div>
                 <div className="header__setting-body-item">
                     <RemoveCircleIcon />
-                    <h2 className="title">cài đặt chặn</h2>
+                    <h2 className="title">Block settings</h2>
                 </div>
             </div>
 

@@ -1,0 +1,18 @@
+@use '../../../../colors.scss';
+@use '../../../../fonts.scss';
+.Menu__Items {
+    padding: 5px;
+    font-size: fonts.$font-size;
+    width: 345px;
+    height: auto;
+    .Menu__Items-border {
+        border-color: #8a8989;
+        border-bottom-width: thin;
+    }
+    .Item {
+        padding: 5px;
+        .Mui-selected:hover {
+            opacity: 0.7;
+        }
+    }
+}
