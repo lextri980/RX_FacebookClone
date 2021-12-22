@@ -76,6 +76,22 @@ $nav-height: 56px;
     position: absolute;
   }
 
+  .left-nav {
+    .left-nav-menu {
+      display: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 10px !important;
+      margin-left: 15px;
+    }
+    .left-nav-menu-icon {
+      fill: colors.$secondary-text-color !important;
+    }
+    .left-nav-menu:hover {
+      background-color: colors.$comment-background;
+    }
+  }
+
   .right-nav {
     right: 16px;
   }
@@ -129,3 +145,4 @@ $nav-height: 56px;
 .messenger-popup{
   background-color: colors.$main-nav-color;
 }
+

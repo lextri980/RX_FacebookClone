@@ -5,6 +5,7 @@ import LiveTvIcon from '@mui/icons-material/LiveTv';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import PeopleIcon from '@mui/icons-material/People';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+
 export default function MidNav() {
     return (
         <div className="nav-center flex-center" style={{ width: '100%' }}>
