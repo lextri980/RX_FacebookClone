@@ -10,8 +10,9 @@ import { styled } from '@mui/material/styles';
 import NavNotificationMenu from './NavNotificationMenu';
 export default function RightSideNav() {
 
+
     const [anchorElNoti, setAnchorElNoti] = React.useState(null);
-    const open = Boolean(anchorElNoti);
+    const openNoti = Boolean(anchorElNoti);
 
     const StyledBadge = styled(Badge)(({ theme }) => ({
         '& .MuiBadge-badge': {
@@ -54,7 +55,7 @@ export default function RightSideNav() {
             <IconButton className="right-nav-btn"><ArrowDropDownIcon /></IconButton>
             <NavNotificationMenu
                 anchorEl={anchorElNoti}
-                open={open}
+                open={openNoti}
                 handleClose={handleNotiClose}
             />
         </div>
