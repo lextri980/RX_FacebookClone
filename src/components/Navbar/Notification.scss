@@ -1,0 +1,109 @@
+@use "../../colors";
+@use "../../fonts";
+.nav-notification {
+  .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::-webkit-scrollbar-thumb {
+    background: #828383a6 !important;
+    border-radius: 10px;
+  }
+
+  .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper::-webkit-scrollbar-track {
+    background: colors.$main-nav-color !important;
+  }
+
+  max-height: 770px;
+
+  ul {
+    background-color: colors.$main-nav-color;
+  }
+
+  .nav-notification-filter-btn {
+    color: colors.$main-text-color;
+    padding: 0;
+    border-radius: 18px;
+    background-color: #ffffff1a;
+    text-transform: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border: none;
+    margin-right: 8px;
+  }
+
+  .nav-notification-filter-btn:hover {
+    background-color: #4e4e4f;
+  }
+
+  .active {
+    background-color: #2d88ff33 !important;
+    color: colors.$blue-text-color !important;
+  }
+
+  .active:hover {
+    background-color: #3b4c63 !important;
+    color: colors.$blue-text-color !important;
+  }
+
+  .nav-notification-item {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 10px 2px 6px;
+    padding: 6px 25px 6px 6px;
+    border-radius: 10px;
+    position: relative;
+    p {
+      font-size: 1.2em;
+      color: colors.$secondary-text-color !important;
+    }
+
+    .nav-notification-item-time {
+      font-size: 1em;
+    }
+
+    .nav-notification-item-btn {
+      position: absolute;
+      right: 10px;
+      top: 18px;
+      box-shadow: 0px 0px 5px black;
+      background-color: #3c3e41;
+      width: 36px;
+      height: 36px;
+    }
+
+    .nav-notification-item-btn:hover {
+      background-color: #4a4d50;
+    }
+  }
+
+  .nav-notification-item:hover {
+    background-color: colors.$comment-background;
+  }
+}
+
+.nav-notification-setting {
+  ul {
+    background-color: colors.$main-nav-color;
+    border: none !important;
+    padding: 8px 0;
+  }
+
+  .nav-notification-setting-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    p {
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+  }
+
+  .nav-notification-setting-item:hover {
+    background-color: colors.$comment-background;
+  }
+}

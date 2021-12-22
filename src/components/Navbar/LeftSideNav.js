@@ -1,5 +1,7 @@
+import { IconButton } from '@mui/material'
 import React from 'react'
 import CustomizedInputBase from './CustomizeInput'
+import { Menu as MenuIcon } from '@mui/icons-material/';
 export default function LeftSideNav() {
     return (
         <div className="left-nav flex-center">
@@ -16,6 +18,12 @@ export default function LeftSideNav() {
                 </svg>
             </a>
             <CustomizedInputBase />
+            <IconButton className="left-nav-menu">
+                <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 em6zcovv left-nav-menu-icon" height="28" width="28">
+                    <path d="M23.5 4a1.5 1.5 0 110 3h-19a1.5 1.5 0 110-3h19zm0 18a1.5 1.5 0 110 3h-19a1.5 1.5 0 110-3h19zm0-9a1.5 1.5 0 110 3h-19a1.5 1.5 0 110-3h19z">
+                    </path>
+                </svg>
+            </IconButton>
         </div>
     )
 }
