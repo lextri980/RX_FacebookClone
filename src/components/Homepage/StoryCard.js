@@ -5,11 +5,18 @@ import { Avatar } from "@mui/material";
 
 // Components
 import { StyledBadge } from "./StyledBadge";
+import { useNavigate } from 'react-router';
+export default function StoryCard({ avatar, image, name, index, data }) {
+  const navigate = useNavigate();
 
-export default function StoryCard({ avatar, image, name }) {
+  const handleChangeRoute = () => {
+    navigate(`/stories/${index}`,
+      { replace: false, state: { data: data } });
+  }
+
   return (
-    <div className="story__card">
-      <img src={image} className="story__cardImage" alt=''/>
+    <div className="story__card" onClick={handleChangeRoute}>
+      <img src={image} className="story__cardImage" alt='' />
       {avatar ? (
         <StyledBadge
           className="story__cardProfile"
