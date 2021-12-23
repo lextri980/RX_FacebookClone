@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Button, FormControl, TextField } from "@mui/material";
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
@@ -125,7 +127,7 @@ function Login() {
           </form>
         </div>
       </div>
-      <Register openModal={openModal} handleCloseModal={handleCloseModal} />
+      <Register openModal={openModal} setOpenModal={setOpenModal} handleCloseModal={handleCloseModal} />
     </>
   );
 }
