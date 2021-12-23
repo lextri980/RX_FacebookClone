@@ -4,7 +4,7 @@ import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRou
 
 const CustomButton = styled("button")`
   background-color: #007fff;
-  padding: 15px 15px 15px 10px;
+  padding: 8px 15px 8px 10px;
   border-radius: 5px;
   color: #fff;
   font-weight: 600;
@@ -14,10 +14,10 @@ const CustomButton = styled("button")`
   cursor: pointer;
   box-shadow: 0 4px 20px 0 rgba(61, 71, 82, 0.1), 0 0 0 0 rgba(0, 127, 255, 0);
   border: none;
-  height: 40px;
   position: absolute;
+  height: 37px;
   bottom: 0;
-  right: 200px;
+  right: 230px;
   display:flex;
   align-items: center;
 
@@ -25,13 +25,13 @@ const CustomButton = styled("button")`
     background-color: #0059b2;
   }
 `;
-function AddStory() {
+function AddStoryBtn() {
   return (
     <CustomButton>
-      <AddCircleOutlineRoundedIcon sx={{ fontSize: "20px" ,mr:"10px"}}/>
+      <AddCircleOutlineRoundedIcon sx={{ fontSize: "20px" ,mr:"5px"}}/>
       Thêm vào tin
     </CustomButton>
   );
 }
 
-export default AddStory;
+export default AddStoryBtn;

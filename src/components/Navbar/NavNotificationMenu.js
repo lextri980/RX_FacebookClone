@@ -1,10 +1,9 @@
-import { Menu, Typography, Avatar, IconButton } from '@mui/material'
 import { MoreHoriz as MoreIcon } from '@mui/icons-material'
+import { IconButton, Menu, Typography } from '@mui/material'
 import React from 'react'
-import user from '../../assets/user.jpg'
-import NotificationSettingMenu from './NotificationSettingMenu'
-import './Notification.scss'
 import NavNotiItem from './NavNotiItem'
+import './Notification.scss'
+import NotificationSettingMenu from './NotificationSettingMenu'
 const sample_data = [
     {
         user: 'Dennis Nguyen',

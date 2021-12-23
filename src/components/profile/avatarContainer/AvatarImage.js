@@ -20,7 +20,7 @@ const Avatar = styled.img`
 
 const UploadBtn = styled.button`
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   left: 135px;
   background-color: #454646;
   border-radius: 50%;

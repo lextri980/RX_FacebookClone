@@ -2,7 +2,7 @@ import { Button, Popover, Typography } from "@mui/material";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import { React, useState } from "react";
 import { styled } from "@mui/material/styles";
-import PopupBtn from "./popupBtn";
+import PopoverCover from "./PopoverCover";
 
 const CoverImageBtn = styled("div")`
   position: absolute;
@@ -64,7 +64,7 @@ function CoverImgBtn({ handleChangeImage }) {
         }}
       >
         <Typography>
-          <PopupBtn handleChangeImage={handleChangeImage} />
+          <PopoverCover handleChangeImage={handleChangeImage} />
         </Typography>
       </Popover>
     </CoverImageBtn>

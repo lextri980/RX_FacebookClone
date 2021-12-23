@@ -1,0 +1,22 @@
+import { Divider } from '@mui/material'
+import React from 'react'
+import styled from "styled-components"
+import NavbarProfile from './NavbarProfile'
+
+const NavContainer = styled('div')`
+width: 870px;
+margin: auto;
+margin-top: 37px;
+font-family: Helvetica, Arial, sans-serif;
+`
+
+function index() {
+    return (
+        <NavContainer>
+            <Divider sx={{height:"0.02em", background:"#4E4F50"}} light/>
+            <NavbarProfile/>
+        </NavContainer>
+    )
+}
+    
+export default index

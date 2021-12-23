@@ -1,23 +1,27 @@
 import React from 'react'
 import AvatarImage from './AvatarImage';
 import styled from "styled-components";
-import FriendAsc from './FriendList';
-import AddStory from './AddStory';
+import FriendList from './FriendList';
+import AddStoryBtn from './AddStoryBtn';
+import EditInfoBtn from './EditInfoBtn';
 
 
 const ProfileAvatar = styled.div`
+font-family: Helvetica, Arial, sans-serif;
     width: 870px;
     margin: auto;
     position: relative;
     display:flex;
+    
 `
 
 function AvatarContainer() {
     return (
         <ProfileAvatar>
             <AvatarImage/>
-            <FriendAsc/>
-            <AddStory/>
+            <FriendList/>
+            <AddStoryBtn/>
+            <EditInfoBtn/>
         </ProfileAvatar>
     )
 }

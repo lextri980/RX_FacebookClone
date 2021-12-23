@@ -8,7 +8,8 @@ import Divider from "@mui/material/Divider";
 import UploadIcon from "@mui/icons-material/Upload";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-function PopupBtn({handleChangeImage}) {
+function PopoverCover
+({handleChangeImage}) {
   return (
     <Box
       sx={{
@@ -46,4 +47,5 @@ function PopupBtn({handleChangeImage}) {
   );
 }
 
-export default PopupBtn;
+export default PopoverCover
+;

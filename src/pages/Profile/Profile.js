@@ -1,7 +1,13 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import { styled } from "@mui/material/styles";
+
 import AvatarContainer from "../../components/profile/avatarContainer";
 import CoverContainer from "../../components/profile/coverContainer";
+import NavProfile from "../../components/profile/navbarContainer";
+import PostsProfile from "../../components/profile/PostsProfile";
+import InfoProfile from "../../components/profile/InfoProfile";
+import FriendsProfile from "../../components/profile/FriendsProfile";
 
 const ProfileContainer = styled("div")`
   background: rgb(4, 46, 91);
@@ -13,14 +19,23 @@ const ProfileContainer = styled("div")`
     rgba(36, 37, 38, 1) 100%
   );
   width: 100%;
-  height: 590px;
+  height: 573.5px;
 `;
+
 function Profile() {
   return (
-    <ProfileContainer>
-      <CoverContainer />
-      <AvatarContainer />
-    </ProfileContainer>
+    <>
+      <ProfileContainer>
+        <CoverContainer />
+        <AvatarContainer />
+        <NavProfile />
+      </ProfileContainer>
+      <Routes>
+        <Route path="/" element={<PostsProfile/>} />
+        <Route path="/about" element={<InfoProfile/>} />
+        <Route path="/friends" element={<FriendsProfile/>} />
+      </Routes>
+    </>
   );
 }
 

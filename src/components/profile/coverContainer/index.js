@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 
 const CoverImageContainer = styled('div')`
 width: 940px;
-height: 58%;
+height: 348px;
 margin: auto;
 overflow: hidden;
 border-radius:0 0 15px 15px;

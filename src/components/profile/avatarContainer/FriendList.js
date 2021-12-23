@@ -40,7 +40,7 @@ const Information = styled.div`
 
 const UserName = styled.h1`
     color: #E4E6EB;
-    font-size: 36px;
+    font-size: 32px;
 `;
 
 const NumberFriend = styled.h3`
@@ -52,7 +52,7 @@ const ListFriends = styled.div`
     display:flex;
 `
 
-function FriendAsc() {
+function FriendList() {
     return (
         <Container>
             <Information>
@@ -68,4 +68,4 @@ function FriendAsc() {
     )
 }
 
-export default FriendAsc
+export default FriendList

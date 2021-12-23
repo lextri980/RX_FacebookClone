@@ -1,31 +1,71 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable array-callback-return */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Button, FormControl, TextField } from "@mui/material";
-import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import React, { useContext, useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import eyeIco from "../../assets/view.png";
 import Register from "../Register/Register";
+import { AuthContext } from "./AuthContext";
 import "./Login.scss";
 
 function Login() {
+  //Context
+  const userData = useContext(AuthContext);
+
   //Local State
+  const [users, setUsers] = useState([]);
   const [openModal, setOpenModal] = useState(false);
+  const [valInput, setValInput] = useState(false);
+  const [revealPw, setRevealPw] = useState("password");
+  const [userInfo, setUserInfo] = useState({
+    username: "",
+    password: "",
+  });
+  const { username, password } = userInfo;
 
-  //Navigate
-  const navigate = useNavigate()
+  //UseEffect
+  useEffect(() => {
+    setUsers(userData);
+  }, []);
 
-  //handleOpenModal()
+  //Navigate router
+  const navigate = useNavigate();
+
+  //handleOpenModal()----------
   const handleOpenModal = () => {
     setOpenModal(true);
   };
 
-  //handleSubmitLogin()
-  const handleSubmitLogin = () => {
-    navigate('/')
-  }
-
-  //handleCloseModal()
+  //handleCloseModal()----------
   const handleCloseModal = () => {
-    setOpenModal(false)
-  }
+    setOpenModal(false);
+  };
+
+  //handleRevealPassword()----------
+  const handleRevealPassword = () => {
+    revealPw === "password" ? setRevealPw("text") : setRevealPw("password");
+  };
+
+  //onChangeUser()----------
+  const onChangeUser = (e) => {
+    setUserInfo({
+      ...userInfo,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  //onSubmitLogin()----------
+  const onSubmitLogin = (e) => {
+    e.preventDefault();
+    users.map((user) => {
+      if (!username || !password) {
+        setValInput(true);
+        console.log("Missing information");
+      } else if (username === user.username && password === user.password) {
+        navigate("/");
+      }
+    });
+  };
 
   return (
     <>
@@ -37,35 +77,57 @@ function Login() {
           </p>
         </div>
         <div className="login__form">
-          <FormControl sx={{ m: 1, width: "50ch" }}>
-            <TextField
-              className="login__form--textfield-username"
-              label="Email address or phone number"
-              variant="outlined"
-            />
-            <TextField
-              className="login__form--textfield-password"
-              label="Password"
-              variant="outlined"
-            />
-            <Button className="login__form--btn" variant="contained" onClick={handleSubmitLogin}>
-              Login
-            </Button>
-            <div className="login__form--fotter">
-              <a href="#">Forgot password?</a>
-              <hr />
+          <form onSubmit={onSubmitLogin}>
+            <FormControl sx={{ m: 1, width: "50ch" }}>
+              <TextField
+                error={valInput}
+                className="login__form--textfield-username"
+                label="Email address or phone number"
+                variant="outlined"
+                name="username"
+                value={username}
+                onChange={onChangeUser}
+              />
+
+              <TextField
+                type={revealPw}
+                error={valInput}
+                className="login__form--textfield-password"
+                label="Password"
+                variant="outlined"
+                name="password"
+                value={password}
+                onChange={onChangeUser}
+              />
+              <img
+                src={eyeIco}
+                alt="eye"
+                className="login__form--textfield-password-reveal"
+                onClick={handleRevealPassword}
+              />
               <Button
-                className="login__form--btn login__form--btn-register"
+                type="submit"
+                className="login__form--btn"
                 variant="contained"
-                onClick={handleOpenModal}
               >
-                Create new account
+                Login
               </Button>
-            </div>
-          </FormControl>
+              <div className="login__form--fotter">
+                <Link to="#">Forgot password?</Link>
+                <hr />
+                <Button
+                  className="login__form--btn login__form--btn-register"
+                  variant="contained"
+                  onClick={handleOpenModal}
+                >
+                  Create new account
+                </Button>
+              </div>
+            </FormControl>
+          </form>
         </div>
       </div>
-      <Register openModal={openModal} handleCloseModal={handleCloseModal}/>
+      <Register openModal={openModal} handleCloseModal={handleCloseModal} />
     </>
   );
 }
