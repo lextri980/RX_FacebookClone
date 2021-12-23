@@ -127,7 +127,7 @@ function Login() {
           </form>
         </div>
       </div>
-      <Register openModal={openModal} handleCloseModal={handleCloseModal} />
+      <Register openModal={openModal} setOpenModal={setOpenModal} handleCloseModal={handleCloseModal} />
     </>
   );
 }
