@@ -21,7 +21,7 @@ const routes = () => {
             path: '/',
             element: <MainLayout />,
             children: [
-                // { path: '/', element: <Homepage/>},
+                { path: '/', element: <Homepage/>},
                 { path: '/profile/*', element: <Profile />},
                 // { path: '/messenges/t/:id', element: <Messenges /> },
                 // { path: '/marketplace', element: <Marketplace /> }

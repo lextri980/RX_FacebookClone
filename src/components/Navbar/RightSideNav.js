@@ -48,8 +48,8 @@ export default function RightSideNav() {
 
   return (
     <div className="right-nav flex-center">
-      <a
-        href="/"
+      <Link
+        to="/profile"
         className="nav-avatar-area flex-center"
         style={{ marginRight: "12px" }}
       >
@@ -59,7 +59,7 @@ export default function RightSideNav() {
           sx={{ width: 28, height: 28, marginRight: "5px" }}
         />
         <Typography style={{ fontSize: "1.17em" }}>User</Typography>
-      </a>
+      </Link>
       <IconButton className="right-nav-btn">
         <AppsIcon />
       </IconButton>
