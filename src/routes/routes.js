@@ -2,6 +2,8 @@ import MainLayout from "../components/Layout/MainLayout"
 import Login from '../pages/Login/Login'
 import Register from '../pages/Register/Register'
 import Profile from '../pages/Profile/Profile'
+import Stories from "../pages/Stories/Stories";
+import Homepage from "../pages/Homepage/Homepage";
 
 const routes = () => {
     return [
@@ -21,7 +23,7 @@ const routes = () => {
             path: '/',
             element: <MainLayout />,
             children: [
-                { path: '/', element: <Homepage/>},
+                { path: '/', element: <Homepage /> },
                 { path: '/profile/*', element: <Profile />},
                 // { path: '/messenges/t/:id', element: <Messenges /> },
                 // { path: '/marketplace', element: <Marketplace /> }
