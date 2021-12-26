@@ -95,7 +95,6 @@ export default function RightSideNav() {
         </StyledBadge>
       </IconButton>
 
-
       <IconButton className="right-nav-btn">
         <ArrowDropDownIcon />
       </IconButton>
