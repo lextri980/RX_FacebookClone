@@ -108,7 +108,7 @@ export default function Stories() {
                 </div>
                 <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div className="main-stories-center">
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end' }}>
+                        <div className="main-stories-left" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end' }}>
                             {firstArray && firstArray.map((element, index) => {
                                 return <div className="main-stories-sub" onClick={() => { moveToStory(state.data.findIndex((e) => { return e.name === element.name })) }}>
                                     <Avatar src={element.avatar} sx={{ width: '40px', height: '40px', border: '4px solid #2e89ff' }} />
@@ -128,7 +128,7 @@ export default function Stories() {
                                             <Avatar src={currentStory.avatar} sx={{ width: '40px', height: '40px', margin: '0 15px 0 10px' }} alt="avatar" />
                                             <Typography sx={{ fontSize: '1.2em' }}>{currentStory.name}</Typography>
                                         </div>
-                                        <div>
+                                        <div className="stories-action-buttons">
                                             <IconButton sx={{ color: 'white' }}>
                                                 <PlayArrowIcon sx={{ fontSize: '30px' }} />
                                             </IconButton>
@@ -146,7 +146,7 @@ export default function Stories() {
                             </div>
                             }
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start' }}>
+                        <div className="main-stories-right" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start' }}>
                             {secondArray.length > 0 && <IconButton className="main-stories-arrow-icon" onClick={moveToNextStory}>
                                 <ArrowFowardIcon />
                             </IconButton>}
@@ -158,7 +158,7 @@ export default function Stories() {
                             })}
                         </div>
                     </div>
-                    <footer style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }}>
+                    <footer className="stories-footer" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }}>
                         <input
                             className="main-stories-input"
                             type="text"

@@ -142,7 +142,43 @@ $nav-height: 56px;
   }
 }
 
-.messenger-popup{
-  background-color: colors.$main-nav-color;
+@media (max-width: 1200px) {
+  .nav-input {
+    width: 22px !important;
+    padding: 9px 8px 9px 32px !important;
+  }
+
+  .nav-avatar-area {
+    display: none !important;
+  }
+
+  .main-nav {
+    .nav-center {
+      .mid-nav-btn {
+        width: 90px !important;
+      }
+    }
+  }
 }
 
+@media (max-width: 900px) {
+  .main-nav {
+    .nav-center {
+      .mid-nav-btn {
+        width: 70px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .left-nav {
+    .left-nav-menu {
+      display: block !important;
+    }
+  }
+
+  .nav-center {
+    display: none !important;
+  }
+}
