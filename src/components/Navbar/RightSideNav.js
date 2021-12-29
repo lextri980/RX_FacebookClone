@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Avatar, IconButton, Popover, Typography, Badge } from "@mui/material";
-
 import user from "../../assets/user.jpg";
 import {
   Apps as AppsIcon,
