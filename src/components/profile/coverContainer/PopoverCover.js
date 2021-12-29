@@ -1,15 +1,12 @@
 import { React } from "react";
-import Box from "@mui/material/Box";
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
+import {Box, List} from "@mui/material";
+import {ListItemButton, ListItemIcon, ListItemText, Divider} from "@mui/material";
 import UploadIcon from "@mui/icons-material/Upload";
-import DeleteIcon from "@mui/icons-material/Delete";
+import DialogDelCover from "./DialogDelCover";
 
 function PopoverCover
-({handleChangeImage}) {
+({handleChangeImage, handleDelCover}) {
+
   return (
     <Box
       sx={{
@@ -36,12 +33,8 @@ function PopoverCover
           </ListItemButton>
         </label>
         <Divider sx={{ width: "88%", bgcolor: "gray", m: "auto" }} />
-        <ListItemButton sx={{ px: 2, py: 0 }}>
-          <ListItemIcon sx={{ my: 0, minWidth: "35px" }}>
-            <DeleteIcon sx={{ color: "#E7E9ED" }} />
-          </ListItemIcon>
-          <ListItemText primary="Gỡ" />
-        </ListItemButton>
+
+        <DialogDelCover handleDelCover={handleDelCover}/>
       </List>
     </Box>
   );

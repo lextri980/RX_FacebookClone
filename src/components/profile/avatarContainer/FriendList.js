@@ -7,7 +7,7 @@ const listFriends = [
         "src":"https://i.pinimg.com/736x/45/ea/97/45ea9732f6d0525ab216c3cbd20e3a7c.jpg"
     },
     {
-        "src":"https://media-exp1.licdn.com/dms/image/C5603AQGPE4MpUNwFsg/profile-displayphoto-shrink_400_400/0/1607738720409?e=1645056000&v=beta&t=VSCFnocziwxDtEtfrAObffeTQc6nCmEMnMgEu12WYBs"
+        "src":"https://i.pinimg.com/736x/89/3b/1e/893b1ea36701a72adbb070dec690f52b.jpg"
     },
     {
         "src":"https://i.pinimg.com/736x/f5/20/f5/f520f5b137d4825be16723df70eb1c3e.jpg"
@@ -32,24 +32,37 @@ const listFriends = [
 const Container = styled.div`
     margin-left: 190px;
     margin-top: 25px;
+    @media (max-width: 898px) {
+        margin:auto;
+      }
 `;
 
 const Information = styled.div`
-
+@media (max-width: 898px) {
+    margin-top:-10px;
+  }
 `;
 
 const UserName = styled.h1`
     color: #E4E6EB;
     font-size: 32px;
+
 `;
 
 const NumberFriend = styled.h3`
     color:#B0B3B8;
+    @media (max-width: 898px) {
+        text-align: center;
+      }
 `;
 
 const ListFriends = styled.div`
     margin-top:10px;
     display:flex;
+    @media (max-width: 898px) {
+        justify-content:center;
+        margin-bottom:15px;
+      }
 `
 
 function FriendList() {

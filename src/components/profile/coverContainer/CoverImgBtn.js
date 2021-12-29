@@ -15,9 +15,13 @@ const CusButton = styled(Button)`
   :hover {
     background-color: #e3e9ef;
   }
+  @media (max-width: 898px){
+    font-size:0;
+    padding-right:0;
+ }
 `;
 
-function CoverImgBtn({ handleChangeImage }) {
+function CoverImgBtn({ handleChangeImage, handleDelCover }) {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -64,7 +68,7 @@ function CoverImgBtn({ handleChangeImage }) {
         }}
       >
         <Typography>
-          <PopoverCover handleChangeImage={handleChangeImage} />
+          <PopoverCover handleChangeImage={handleChangeImage} handleDelCover={handleDelCover}/>
         </Typography>
       </Popover>
     </CoverImageBtn>

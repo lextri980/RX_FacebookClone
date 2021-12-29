@@ -1,6 +1,6 @@
-import React from "react";
+import React,{useState} from "react";
 import styled from "styled-components";
-import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import PopupAvatar from "./PopupAvatar";
 
 const AvatarContainer = styled.div`
   width: 177px;
@@ -11,39 +11,32 @@ const AvatarContainer = styled.div`
   position: absolute;
   top: -33px;
   left: 0;
+   @media (max-width: 898px){
+    position:relative;
+ }
 `;
 
 const Avatar = styled.img`
   width: 100%;
   height: auto;
-`;
-
-const UploadBtn = styled.button`
-  position: absolute;
-  bottom: 0px;
-  left: 135px;
-  background-color: #454646;
-  border-radius: 50%;
-  border: none;
-  padding: 6px 6px 2px 6px;
-  cursor: pointer;
-  &:hover {
-    background-color: #575859;
-  }
+  max-height:170px;
 `;
 
 function AvatarImage() {
+  const [avatarProfile, setAvatarProfile] = useState("https://i.pinimg.com/564x/c7/1c/fa/c71cfa901ececa3ab8cb59968aefc0b1.jpg");
+
+  const changeAvatar = (link)=>{
+    setAvatarProfile(link);
+  }
   return (
     <>
       <AvatarContainer>
         <Avatar
-          src="https://i.pinimg.com/564x/c7/1c/fa/c71cfa901ececa3ab8cb59968aefc0b1.jpg"
+          src={avatarProfile}
           alt="somebody"
         />
       </AvatarContainer>
-      <UploadBtn>
-        <CameraAltIcon sx={{ color: "#E8E7EC", m: "auto", fontSize: "26px" }} />
-      </UploadBtn>
+        <PopupAvatar changeAvatar={changeAvatar}/>
     </>
   );
 }

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button, Popover, Typography } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import {Link} from "react-router-dom"
+import MoreBtn from "./MoreBtn";
 
 
 const MainNavbar = styled("div")`
@@ -18,7 +19,7 @@ const CusLink = styled(Link)`
   display: inline-block;
   border-radius: 7px;
   text-align: center;
-  border-bottom: 5px solid red;
+  // border-bottom: 5px solid red;
   &:hover {
     background-color: #3a3b3c;
   }
@@ -48,14 +49,14 @@ const CusNavButton = styled(Button)`
   }
 `;
 
-const showNavbar = [
+const showNavbar = {main:[
   { vn: "Bài viết", eng: "" },
   { vn: "Giới thiệu", eng: "about" },
   { vn: "Bạn bè", eng: "friends" },
   { vn: "Ảnh", eng: "photos" },
   { vn: "Kho lưu trữ", eng: "archive" },
-  { vn: "Video", eng: "videos" },
-];
+  { vn: "Video", eng: "videos" }
+], hid:[]};
 const hiddenNavbar = [
   "Check in",
   "Thể thao",
@@ -68,6 +69,29 @@ const hiddenNavbar = [
   "Nhóm",
   "Ứng dụng và trò chơi",
 ];
+
+const FlexDiv = styled("div")`
+  display:flex;
+  align-items:center;
+`
+
+const widthWin = window.innerWidth;
+if(widthWin < 430){
+  const temp = showNavbar.main.splice(2,4);
+  showNavbar.hid = showNavbar.hid.concat(temp);
+}
+else if(widthWin < 500){
+  const temp = showNavbar.main.splice(3,3);
+  showNavbar.hid = showNavbar.hid.concat(temp);
+}
+else if(widthWin < 590){
+  const temp = showNavbar.main.splice(4,2);
+  showNavbar.hid = showNavbar.hid.concat(temp);
+}
+else if(widthWin < 655){
+  const temp = showNavbar.main.pop();
+  showNavbar.hid.push(temp)
+}
 
 function NavbarProfile() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -84,20 +108,17 @@ function NavbarProfile() {
   const id = open ? "simple-popover" : undefined;
   return (
     <MainNavbar>
-      <div>
-        {showNavbar.map((ele) => (
+      <FlexDiv>
+        {showNavbar.main.map((ele)  => (
           <CusLink to={`/profile/${ele.eng}`} key={ele.vn}>
             <TextNav>{ele.vn}</TextNav>
-            {/* <UnderLine /> */}
           </CusLink>
         ))}
-        <Button >
-          <TextNav>Xem Thêm</TextNav>
-          {/* <UnderLine /> */}
-        </Button>
-      </div>
+        <MoreBtn hid = {showNavbar.hid} />
+      </FlexDiv>
       <div>
         <CusNavButton
+        sx={{mt:'8px'}}
           aria-describedby={id}
           variant="contained"
           onClick={handleClick}

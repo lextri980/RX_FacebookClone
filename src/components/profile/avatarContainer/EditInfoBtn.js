@@ -20,7 +20,17 @@ const CustomButton = styled("button")`
   right: 0;
   display: flex;
   align-items: center;
-
+  @media (max-width: 898px) {
+    position: static;
+  }
+  @media (max-width: 743px) {
+    width: 225px;
+  }
+  @media (max-width: 400px){
+    width: 94vw;
+    margin-top:7px;
+    justify-content:center;
+  }
   &:hover {
     background-color: #4e4f50;
   }
