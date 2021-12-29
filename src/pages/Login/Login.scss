@@ -39,7 +39,8 @@
       position: relative;
     }
 
-    .login__form--textfield-password-reveal {
+    .login__form--textfield-password-reveal,
+    .login__form--textfield-password-hidden {
       position: absolute;
       right: 20px;
       top: 112px;
@@ -56,7 +57,7 @@
       font-weight: 600;
     }
 
-    .login__form--fotter {
+    .login__form--footer {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -77,7 +78,7 @@
         width: 320px;
         background-color: rgb(223, 223, 223);
       }
-
+      
       .login__form--btn-register {
         background-color: #42b72a;
         width: 230px !important;
@@ -85,3 +86,43 @@
     }
   }
 }
+
+/* Responsive: Tablet */
+@media screen and (min-width: 416px) and (max-width: 1024px) {
+  .login {
+    padding: 0 30px ;
+  }
+}
+
+/* Responsive: Mobile */
+@media screen and (max-width: 415px) {
+  .login {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .login__title {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 20px;
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    .login__form {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      width: 95%;
+      padding: 10px;
+    }
+  }
+}
+
