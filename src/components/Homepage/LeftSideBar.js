@@ -17,7 +17,7 @@ const Market = "https://static.xx.fbcdn.net/rsrc.php/v3/yU/r/D2y-jJ2C_hO.png";
 
 function LeftSideBar() {
   return (
-    <div className="sb">
+    <div className="sb" id="leftSideBar">
       <SideBarOption src={Avatar} title="Username" />
       <SideBarOption src={Friend} title="Bạn bè" />
       <SideBarOption src={Messenger} title="Messenger" />

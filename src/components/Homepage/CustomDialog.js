@@ -44,7 +44,7 @@ const CustomDialog = ({ isOpen, setIsOpen }) => {
               value={inputText}
               onChange={(e) => setInputText(e.currentTarget.value)}
             />
-            {file && <img style={{ width: "100%" }} src={file} />}
+            {file && <img style={{ width: "100%" }} src={file} alt=''/>}
           </div>
         </div>
 

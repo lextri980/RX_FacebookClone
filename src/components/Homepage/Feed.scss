@@ -38,7 +38,7 @@
   border-radius: 10px !important;
   width: 100%;
 
-  font-family: 'Roboto';
+  font-family: "Roboto";
 
   .upload__dialog {
     padding: 15px;
@@ -59,7 +59,7 @@
         background: transparent;
         border: none;
         outline: none;
-        font-family: 'Roboto';
+        font-family: "Roboto";
         color: white;
         font-size: 1.5rem;
         resize: none;
@@ -75,9 +75,14 @@
         align-items: center;
 
         border: 1px solid #3e4042;
-        box-shadow: 0 1px 2px rgba(255,255,255, 0.05);
+        box-shadow: 0 1px 2px rgba(255, 255, 255, 0.05);
         border-radius: 8px;
 
+        @media screen and (max-width: 768px) {
+          .upload__optionsRight {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -95,8 +100,7 @@
     display: flex;
 
     .story__card {
-      width: 115px;
-      height: 190px;
+      width: 100%;
       margin-right: 10px;
       position: relative;
       box-sizing: border-box;
@@ -268,7 +272,7 @@
       }
 
       .post__body-caption {
-        padding: 0 15px 10px 15px;
+        padding: 0 16px 16px 16px;
       }
     }
 
@@ -276,13 +280,15 @@
       display: flex;
       justify-content: space-evenly;
       padding: 5px 0;
+      margin: 0 12px;
 
       .post__reaction {
         position: relative;
 
         .post__reaction-bar {
           background-color: colors.$main-nav-color;
-          box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 2px 2px rgba(0, 0, 0, .15);
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08),
+            0 2px 2px rgba(0, 0, 0, 0.15);
           display: flex;
           list-style: none;
           border-radius: 30px;
@@ -297,6 +303,12 @@
             cursor: pointer;
           }
         }
+
+        @media screen and (max-width: 768px) {
+          .post__reaction-bar {
+            left: unset;
+          }
+        }
       }
 
       .post__bottom-action {
@@ -307,6 +319,7 @@
         cursor: pointer;
         border-radius: 10px;
         transition: all 0.2s;
+        color: #b0b3b8;
 
         &:hover {
           background-color: #3a3b3c;
@@ -320,11 +333,92 @@
         }
       }
     }
+
+    .post__comment {
+      padding: 8px 12px;
+
+      .comment__option {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-weight: bold;
+        color: #b0b3b8;
+        cursor: pointer;
+      }
+
+      .comment__container {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+
+        .comment__right {
+          display: flex;
+          flex-direction: column;
+
+          .comment__rightTop {
+            display: flex;
+
+            .comment__content {
+              padding: 8px 12px;
+              background-color: colors.$comment-background;
+              border-radius: 18px;
+
+              .comment__userName {
+                font-weight: bold;
+              }
+            }
+          }
+
+          .comment__actions {
+            display: flex;
+            padding-top: 3px;
+            margin-left: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            list-style: none;
+            color: #b0b3b8;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .comment__input {
+        display: flex;
+        align-items: center;
+
+        .comment__inputBar {
+          width: 100%;
+
+          input {
+            padding: 8px 12px;
+            background-color: colors.$comment-background;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+            color: white;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {
     .story {
+      height: 50px;
+      width: 100%;
+    }
+
+    .story__card .story__cardImage {
       display: none;
+    }
+
+    .story__card h4 {
+      display: none;
+    }
+
+    .story__cardProfile {
+      position: relative !important;
     }
   }
 }
