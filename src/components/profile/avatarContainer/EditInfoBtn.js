@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import EditIcon from '@mui/icons-material/Edit';
-
+import EditIcon from "@mui/icons-material/Edit";
+import EditProfileModal from "../EditProfileModal/EditProfileModal";
 const CustomButton = styled("button")`
-  background-color: #3A3B3C;
+  background-color: #3a3b3c;
   padding: 8px 15px 8px 10px;
   border-radius: 5px;
   color: #fff;
@@ -32,12 +32,32 @@ const CustomButton = styled("button")`
     justify-content:center;
   }
   &:hover {
-    background-color: #4E4F50;
+    background-color: #4e4f50;
   }
 `;
 
 function EditInfoBtn() {
-  return <CustomButton><EditIcon sx={{ fontSize: "20px", mr:'2px'}}/> Chỉnh sửa trang cá nhân</CustomButton>;
+  const [modalEditProfile, setModalEditProfile] = useState(false);
+
+  const handleOpenEditProfile = () => {
+    setModalEditProfile(true)
+  }
+
+  const handleCloseEditProfile = () => {
+    setModalEditProfile(false)
+  }
+
+  return (
+    <>
+      <CustomButton
+        onClick={handleOpenEditProfile}
+      >
+        <EditIcon sx={{ fontSize: "20px", mr: "2px" }} /> Chỉnh sửa trang cá
+        nhân
+      </CustomButton>
+      {modalEditProfile && <EditProfileModal handleCloseEditProfile={handleCloseEditProfile}/>}
+    </>
+  );
 }
 
 export default EditInfoBtn;
