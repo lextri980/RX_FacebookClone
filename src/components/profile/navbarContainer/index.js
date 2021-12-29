@@ -5,9 +5,15 @@ import NavbarProfile from './NavbarProfile'
 
 const NavContainer = styled('div')`
 width: 870px;
-margin: auto;
 margin-top: 37px;
 font-family: Helvetica, Arial, sans-serif;
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+bottom:0;
+@media (max-width: 898px){
+    width:100%;
+ }
 `
 
 function index() {

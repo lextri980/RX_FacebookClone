@@ -20,6 +20,16 @@ const ProfileContainer = styled("div")`
   );
   width: 100%;
   height: 573.5px;
+  position:relative;
+  @media (max-width: 898px){
+    height:calc(360px + 35vw);
+ }
+ @media (max-width: 600px){
+   height: calc(400px + 30vw);
+ }
+ @media (max-width: 400px){
+  height: calc(435px + 30vw);
+}
 `;
 
 function Profile() {

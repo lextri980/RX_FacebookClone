@@ -20,9 +20,22 @@ const CustomButton = styled("button")`
   right: 230px;
   display:flex;
   align-items: center;
-
   &:hover {
     background-color: #0059b2;
+  }
+
+  @media (max-width: 898px) {
+    position: static;
+    margin-right:5px;
+  }
+  @media (max-width: 743px) {
+    width: 150px;
+  }
+  @media (max-width: 400px){
+    width: 94vw;
+    margin-right:0;
+    margin-top:-5px;
+    justify-content:center;
   }
 `;
 function AddStoryBtn() {

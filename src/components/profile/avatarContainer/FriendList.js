@@ -32,24 +32,37 @@ const listFriends = [
 const Container = styled.div`
     margin-left: 190px;
     margin-top: 25px;
+    @media (max-width: 898px) {
+        margin:auto;
+      }
 `;
 
 const Information = styled.div`
-
+@media (max-width: 898px) {
+    margin-top:-10px;
+  }
 `;
 
 const UserName = styled.h1`
     color: #E4E6EB;
     font-size: 32px;
+
 `;
 
 const NumberFriend = styled.h3`
     color:#B0B3B8;
+    @media (max-width: 898px) {
+        text-align: center;
+      }
 `;
 
 const ListFriends = styled.div`
     margin-top:10px;
     display:flex;
+    @media (max-width: 898px) {
+        justify-content:center;
+        margin-bottom:15px;
+      }
 `
 
 function FriendList() {
