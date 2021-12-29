@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import AvatarImage from './AvatarImage';
 import styled from "styled-components";
 import FriendList from './FriendList';
@@ -16,14 +16,16 @@ font-family: Helvetica, Arial, sans-serif;
 `
 
 function AvatarContainer() {
+    
     return (
         <ProfileAvatar>
             <AvatarImage/>
             <FriendList/>
             <AddStoryBtn/>
-            <EditInfoBtn/>
+           <EditInfoBtn/>
         </ProfileAvatar>
     )
+    
 }
 
 export default AvatarContainer
