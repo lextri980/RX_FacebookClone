@@ -18,7 +18,7 @@ display: inline-block;
 border-radius: 7px;
 text-align: center;
 border:none;
-border-bottom: 5px solid red;
+// border-bottom: 5px solid red;
 color: #a1a3a6;
 &:hover {
   background-color: #3a3b3c;

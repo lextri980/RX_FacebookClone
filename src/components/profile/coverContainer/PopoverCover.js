@@ -6,6 +6,7 @@ import DialogDelCover from "./DialogDelCover";
 
 function PopoverCover
 ({handleChangeImage, handleDelCover}) {
+
   return (
     <Box
       sx={{

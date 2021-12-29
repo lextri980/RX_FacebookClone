@@ -21,17 +21,17 @@ const UploadBtn = styled.button`
   &:hover {
     background-color: #575859;
   }
-  @media (max-width: 898px){
-    bottom:59%;
-    left:64%;
- }
- @media (max-width: 400px){
-  bottom:63%;
-  left:64%;
-}
+  @media (max-width: 898px) {
+    bottom: 59%;
+    left: 64%;
+  }
+  @media (max-width: 400px) {
+    bottom: 63%;
+    left: 64%;
+  }
 `;
 
-export default function PopupAvatar() {
+export default function PopupAvatar({ changeAvatar }) {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState("paper");
 
@@ -72,7 +72,10 @@ export default function PopupAvatar() {
             ref={descriptionElementRef}
             tabIndex={-1}
           >
-              <ContentDialog/>
+            <ContentDialog
+              changeAvatar={changeAvatar}
+              handleClose={handleClose}
+            />
           </DialogContentText>
         </DialogContent>
       </Dialog>

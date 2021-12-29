@@ -19,7 +19,7 @@ const CusLink = styled(Link)`
   display: inline-block;
   border-radius: 7px;
   text-align: center;
-  border-bottom: 5px solid red;
+  // border-bottom: 5px solid red;
   &:hover {
     background-color: #3a3b3c;
   }
