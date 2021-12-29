@@ -2,6 +2,8 @@ import MainLayout from "../components/Layout/MainLayout"
 import Login from '../pages/Login/Login'
 import Register from '../pages/Register/Register'
 import Profile from '../pages/Profile/Profile'
+import ForgotPassword from '../pages/ForgotPassword/ForgotPassword'
+import Homepage from "../pages/Homepage/Homepage";
 import Stories from "../pages/Stories/Stories";
 import Homepage from "../pages/Homepage/Homepage";
 
@@ -12,8 +14,8 @@ const routes = () => {
             element: <Login/>
         },
         {
-            path:'/register',
-            element: <Register/>
+            path:'/forgot-password',
+            element: <ForgotPassword/>
         },
         {
             path: '/stories/:id',

@@ -4,6 +4,7 @@ import { Button, FormControl, TextField } from "@mui/material";
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import eyeIco from "../../assets/view.png";
+import eyeHiddenIco from '../../assets/hidden.png'
 import Register from "../Register/Register";
 import { AuthContext } from "./AuthContext";
 import "./Login.scss";
@@ -17,6 +18,8 @@ function Login() {
   const [openModal, setOpenModal] = useState(false);
   const [valInput, setValInput] = useState(false);
   const [revealPw, setRevealPw] = useState("password");
+  const [revealImg, setRevealImg] = useState("block");
+  const [hiddenImg, setHiddenImg] = useState("none");
   const [userInfo, setUserInfo] = useState({
     username: "",
     password: "",
@@ -43,7 +46,20 @@ function Login() {
 
   //handleRevealPassword()----------
   const handleRevealPassword = () => {
-    revealPw === "password" ? setRevealPw("text") : setRevealPw("password");
+    if (revealPw === 'password'){
+      setRevealPw('text')
+      setRevealImg('none')
+      setHiddenImg('block')
+    }
+  };
+
+  //handleHiddenPassword()----------
+  const handleHiddenPassword = () => {
+    if (revealPw === 'text'){
+      setRevealPw('password')
+      setRevealImg('block')
+      setHiddenImg('none')
+    }
   };
 
   //onChangeUser()----------
@@ -103,7 +119,15 @@ function Login() {
                 src={eyeIco}
                 alt="eye"
                 className="login__form--textfield-password-reveal"
+                style={{display: `${revealImg}`}}
                 onClick={handleRevealPassword}
+              />
+              <img
+                src={eyeHiddenIco}
+                alt="eyeH"
+                style={{display: `${hiddenImg}`}}
+                className="login__form--textfield-password-hidden"
+                onClick={handleHiddenPassword}
               />
               <Button
                 type="submit"
@@ -112,8 +136,8 @@ function Login() {
               >
                 Login
               </Button>
-              <div className="login__form--fotter">
-                <Link to="#">Forgot password?</Link>
+              <div className="login__form--footer">
+                <Link to="/forgot-password">Forgot password?</Link>
                 <hr />
                 <Button
                   className="login__form--btn login__form--btn-register"

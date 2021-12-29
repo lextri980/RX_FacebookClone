@@ -51,7 +51,18 @@
   }
 }
 
-@media screen and (min-) {
+@media screen and (max-width: 1200px) {
+  #rightSideBar {
+    display: none;
+  }
+
+  #leftSideBar {
+    min-width: unset;
+  }
+
+  #leftSideBar .sb__title {
+    display: none;
+  }
 }
 
 .sb::-webkit-scrollbar {
