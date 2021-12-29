@@ -36,6 +36,7 @@ function Register({ openModal,setOpenModal, handleCloseModal }) {
       onClose={handleCloseModal}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
+      className='register__modal'
     >
       <RegisterBox
         regInfo={regInfo}
