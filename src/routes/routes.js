@@ -5,7 +5,6 @@ import Profile from '../pages/Profile/Profile'
 import ForgotPassword from '../pages/ForgotPassword/ForgotPassword'
 import Homepage from "../pages/Homepage/Homepage";
 import Stories from "../pages/Stories/Stories";
-import Homepage from "../pages/Homepage/Homepage";
 
 const routes = () => {
     return [

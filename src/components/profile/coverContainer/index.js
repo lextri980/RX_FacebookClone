@@ -35,6 +35,10 @@ function CoverContainer() {
         setCoverImage(URL.createObjectURL(e.target.files[0]));
     }
 
+    const handleChangeImgByChoose = (ele)=>{
+        setCoverImage(ele)
+    }
+
     const handleDelCover = ()=>{
         setCoverImage("");
     }
@@ -43,7 +47,7 @@ function CoverContainer() {
         <CoverImageContainer>
             <ConfirmBoxCover/>
             <Image src={coverImage} alt="cover"/>
-            <CoverImgBtn handleCoverImage={handleCoverImage} handleChangeImage={handleChangeImage} handleDelCover={handleDelCover}/>
+            <CoverImgBtn handleCoverImage={handleCoverImage} handleChangeImgByChoose={handleChangeImgByChoose} handleChangeImage={handleChangeImage} handleDelCover={handleDelCover}/>
         </CoverImageContainer>
     )
 }

@@ -1,12 +1,16 @@
 import { React } from "react";
-import {Box, List} from "@mui/material";
-import {ListItemButton, ListItemIcon, ListItemText, Divider} from "@mui/material";
+import { Box, List } from "@mui/material";
+import {
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+} from "@mui/material";
 import UploadIcon from "@mui/icons-material/Upload";
 import DialogDelCover from "./DialogDelCover";
+import DialogChooseImg from "./DialogChooseImg";
 
-function PopoverCover
-({handleChangeImage, handleDelCover}) {
-
+function PopoverCover({ handleChangeImage, handleDelCover,handleChangeImgByChoose }) {
   return (
     <Box
       sx={{
@@ -17,6 +21,7 @@ function PopoverCover
       }}
     >
       <List component="nav" aria-label="main mailbox folders">
+        <DialogChooseImg handleChangeImgByChoose={handleChangeImgByChoose}/>
         <label htmlFor="upload-photo">
           <input
             style={{ display: "none" }}
@@ -25,7 +30,7 @@ function PopoverCover
             type="file"
             onChange={handleChangeImage}
           />
-          <ListItemButton sx={{ px: 2, py: 0 }}>
+          <ListItemButton sx={{ px: 2, py: 0 , my: "5px"}}>
             <ListItemIcon sx={{ my: 0, minWidth: "35px" }}>
               <UploadIcon sx={{ color: "#E7E9ED" }} />
             </ListItemIcon>
@@ -34,11 +39,10 @@ function PopoverCover
         </label>
         <Divider sx={{ width: "88%", bgcolor: "gray", m: "auto" }} />
 
-        <DialogDelCover handleDelCover={handleDelCover}/>
+        <DialogDelCover handleDelCover={handleDelCover} />
       </List>
     </Box>
   );
 }
 
-export default PopoverCover
-;
+export default PopoverCover;
