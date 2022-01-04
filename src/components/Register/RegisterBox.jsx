@@ -30,7 +30,7 @@ function RegisterBox({regInfo, onChangeReg, onSubmit}) {
   };
 
   return (
-    <Box sx={style}>
+    <Box sx={style} className="register__box--container">
       <Typography id="modal-modal-title" variant="h4" sx={styleTypo}>
         Sign Up
       </Typography>
@@ -84,6 +84,7 @@ function RegisterBox({regInfo, onChangeReg, onSubmit}) {
             size="small"
             variant="outlined"
             name="date"
+            placeholder="Date"
             value={regInfo.date}
             onChange={onChangeReg}
           />
@@ -93,6 +94,7 @@ function RegisterBox({regInfo, onChangeReg, onSubmit}) {
             size="small"
             variant="outlined"
             name="month"
+            placeholder="Month"
             value={regInfo.month}
             onChange={onChangeReg}
           />
@@ -102,6 +104,7 @@ function RegisterBox({regInfo, onChangeReg, onSubmit}) {
             size="small"
             variant="outlined"
             name="year"
+            placeholder="Year"
             value={regInfo.year}
             onChange={onChangeReg}
           />

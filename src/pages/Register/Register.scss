@@ -10,7 +10,6 @@ hr {
   justify-content: center !important;
   flex-wrap: wrap !important;
   width: 100%;
-  flex-wrap: nowrap;
 
   .register__form--text1 {
     width: 200px !important;
@@ -21,6 +20,7 @@ hr {
     width: 200px !important;
     margin-left: 10px;
   }
+
   .register__form--text-long {
     margin-top: 20px;
     width: 420px !important;
@@ -45,7 +45,37 @@ hr {
     width: 420px !important;
   }
 
-  .register__form--btn-signup{
+  .register__form--btn-signup {
     width: 150px;
+  }
+}
+
+/* Responsive: Tablet */
+//Not-necessary
+
+/* Responsive: Mobile */
+@media screen and (max-width: 415px) {
+  .register__box--container {
+    width: 350px !important;
+
+    .register__form {
+      .register__form--text1 {
+        width: 130px !important;
+        margin-right: 15px;
+      }
+
+      .register__form--text2 {
+        width: 130px !important;
+        margin-left: 10px;
+      }
+
+      .register__form--date {
+        width: 75px;
+      }
+
+      .mid {
+        margin: 0 30px;
+      }
+    }
   }
 }

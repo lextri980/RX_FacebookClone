@@ -12,7 +12,7 @@ import "./SideBar.scss";
 
 export default function RightSideBar() {
   return (
-    <div className="sb">
+    <div className="sb" id="rightSideBar">
       <div className="sb__head">
         <h3>Người liên hệ</h3>
         <div>

@@ -21,7 +21,7 @@ const CusButton = styled(Button)`
  }
 `;
 
-function CoverImgBtn({ handleChangeImage, handleDelCover }) {
+function CoverImgBtn({ handleChangeImage, handleDelCover,handleChangeImgByChoose }) {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -68,7 +68,7 @@ function CoverImgBtn({ handleChangeImage, handleDelCover }) {
         }}
       >
         <Typography>
-          <PopoverCover handleChangeImage={handleChangeImage} handleDelCover={handleDelCover}/>
+          <PopoverCover handleChangeImage={handleChangeImage} handleDelCover={handleDelCover} handleChangeImgByChoose={handleChangeImgByChoose}/>
         </Typography>
       </Popover>
     </CoverImageBtn>
