@@ -82,3 +82,17 @@
     display: flex;
     flex-direction: column;
 }
+.messenger__goto{
+    padding: 10px 0px;
+    display: flex;
+    border-top: 1px solid #474646;
+    border-radius: 1px;
+    .messenger__goto-text{
+        color: #4599ff;
+        cursor: pointer;
+        margin: auto;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

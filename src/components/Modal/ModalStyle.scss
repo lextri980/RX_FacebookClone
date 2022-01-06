@@ -20,6 +20,7 @@
 .modal__body{
     background-color: colors.$main-body-color;
     margin: auto;
+    display: flex;
     border-radius: 10px;
     position: relative;
 }
