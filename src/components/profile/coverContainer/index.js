@@ -27,7 +27,7 @@ color: transparent;
 `
 
 function CoverContainer() {
-    const [coverImage,setCoverImage] = useState("https://scontent.fhan5-10.fna.fbcdn.net/v/t39.30808-6/262363283_3171575486421858_460081271991288862_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=e3f864&_nc_ohc=6aFXojYbRHEAX8Y_j88&tn=e_caVoF4nqMJtuev&_nc_ht=scontent.fhan5-10.fna&oh=00_AT_1fd7WPn63JR4FUAUMzZW8TPs389Bt7fovnG3blNTg0A&oe=61D051D6")
+    const [coverImage,setCoverImage] = useState("https://scontent.fhan5-10.fna.fbcdn.net/v/t39.30808-6/262363283_3171575486421858_460081271991288862_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=e3f864&_nc_ohc=GXKXj680FRwAX_w0XXA&_nc_ht=scontent.fhan5-10.fna&oh=00_AT_raGjKZuTgOY1WdTnfbwyTGjretKaNVm0Z_xVXa--QEA&oe=61DE2996")
     const handleCoverImage = ()=>{
         
     }

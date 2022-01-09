@@ -8,6 +8,7 @@ import NavProfile from "../../components/profile/navbarContainer";
 import PostsProfile from "../../components/profile/PostsProfile";
 import InfoProfile from "../../components/profile/InfoProfile";
 import FriendsProfile from "../../components/profile/FriendsProfile";
+import PhotosProfile from "../../components/profile/PhotosProfile";
 
 const ProfileContainer = styled("div")`
   background: rgb(4, 46, 91);
@@ -43,6 +44,8 @@ function Profile() {
       <Routes>
         <Route path="/" element={<PostsProfile/>} />
         <Route path="/about" element={<InfoProfile/>} />
+        <Route path="/friends" element={<FriendsProfile/>} />
+        <Route path="/photos" element={<PhotosProfile/>} />
         <Route path="/friends" element={<FriendsProfile/>} />
       </Routes>
     </>
