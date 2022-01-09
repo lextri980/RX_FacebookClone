@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useState} from 'react'
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Popover from '@mui/material/Popover';
 import Modal from "../../Modal/Modal";
 import './EditProfileModalStyle.scss'
+import EditImageModal from './EditImageCoverModal/EditImageModal'
+import EditImageAvatarModal from './EditImageAvatarModal/EditImageAvatarModal';
 
 const imageAvatar = "https://i.pinimg.com/564x/c7/1c/fa/c71cfa901ececa3ab8cb59968aefc0b1.jpg"
-const imageCoverPage = "https://scontent.fhan5-10.fna.fbcdn.net/v/t39.30808-6/262363283_3171575486421858_460081271991288862_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=e3f864&_nc_ohc=yfJCNkriurkAX-9Haar&tn=e_caVoF4nqMJtuev&_nc_ht=scontent.fhan5-10.fna&oh=00_AT9DzUSjqNAi91mrQy6x-c3JWOXJpsx5QTCIVe17EnlSWQ&oe=61CA6316"
+const imageCoverPage = "https://scontent.fhan5-10.fna.fbcdn.net/v/t39.30808-6/262363283_3171575486421858_460081271991288862_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=e3f864&_nc_ohc=6aFXojYbRHEAX8Y_j88&tn=e_caVoF4nqMJtuev&_nc_ht=scontent.fhan5-10.fna&oh=00_AT_1fd7WPn63JR4FUAUMzZW8TPs389Bt7fovnG3blNTg0A&oe=61D051D6"
 const bio = "I know who u are!!!"
 const itemData = [
     {
@@ -63,7 +66,31 @@ const itemData = [
 ];
 
 const EditProfileModal = props => {
-    // console.log(props);
+    const [avatar, setAvatar] = useState(imageAvatar)
+    const [coverPhoto, setCoverPhoto] = useState(imageCoverPage)
+    const [openEditAvatar, setEditAvatar] = useState(false)
+    const [openEditCoverPhoto, setOpenEditCoverPhoto] = useState(false)
+    const handleOpenEditAvatar = () => {
+        setEditAvatar(true)
+    }
+
+    const handleCloseEditAvatar = () => {
+        setEditAvatar(false)
+    }
+
+    const handleOpenEditCoverPhoto = () =>{
+        setOpenEditCoverPhoto(true)
+    }
+
+    const handleCloseEditCoverPhoto = () => {
+        setOpenEditCoverPhoto(false)
+    }
+
+    const changeAvatar = (link) => {
+        setAvatar(link)
+    }
+
+
     return (
         <Modal>
             <div className='modal__content'>
@@ -76,16 +103,19 @@ const EditProfileModal = props => {
                 <div className="modal__content-items modal__content-profile-picture">
                     <div className="modal__content-title">
                         <h3>Profile Picture</h3>
-                        <Button variant="text">Edit</Button>
+                        <Button variant="text" onClick={handleOpenEditAvatar}>Edit</Button>
+                        {openEditAvatar && <EditImageAvatarModal changeAvatar={changeAvatar} handleClose={handleCloseEditAvatar} />}
+                        {/* <EditImageModal onCloseEdit={handleCloseEditAvatar}/> */}
                     </div>
-                    <img src={imageAvatar} alt="avatar" />
+                    <img src={avatar} alt="avatar" />
                 </div>
                 <div className="modal__content-items modal__content-cover-photo">
                     <div className="modal__content-title">
                         <h3>Cover Photo</h3>
-                        <Button variant="text">Edit</Button>
+                        <Button variant="text" onClick={handleOpenEditCoverPhoto}>Edit</Button>
+                        {openEditCoverPhoto && <EditImageModal onCloseEdit={handleCloseEditCoverPhoto}/>}
                     </div>
-                    <img src={imageCoverPage} alt="cover page" />
+                    <img src={coverPhoto} alt="cover page" />
                 </div>
                 <div className="modal__content-items modal__content-bio">
                     <div className="modal__content-title">

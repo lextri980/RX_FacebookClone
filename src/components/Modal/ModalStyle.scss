@@ -7,7 +7,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    
+    z-index: 1;
 }
 
 .modal__overlay{
@@ -20,7 +20,7 @@
 .modal__body{
     background-color: colors.$main-body-color;
     margin: auto;
+    display: flex;
     border-radius: 10px;
     position: relative;
-    z-index: 3;
 }

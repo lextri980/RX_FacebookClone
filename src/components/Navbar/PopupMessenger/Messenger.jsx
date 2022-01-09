@@ -9,6 +9,7 @@ import './MessengerStyle.scss'
 import CardMessenger from './CardMessenger';
 import { Popover } from '@mui/material';
 import HeaderSetting from './HeaderSetting/HeaderSetting';
+import Typography from '@mui/material/Typography';
 
 const Messenger = () => {
     const [chats, setChats] = useState([])
@@ -29,6 +30,8 @@ const Messenger = () => {
     useEffect(() => {
         setChats(datas)
     }, [])
+
+    console.log('data',chats);
 
     return (
             <div className='messenger'>
@@ -66,7 +69,7 @@ const Messenger = () => {
                     <input className='messenger__search-input' type="text" placeholder='Tìm kiếm trên messenger...'/>
                 </div>
                 <div className="messenger__body">
-                    {chats.map((chat) =>(
+                    {chats.slice(0, 10).map((chat) =>(
                         <CardMessenger 
                             key={chat.id}
                             id={chat.id}
@@ -75,7 +78,10 @@ const Messenger = () => {
                             lastchat={chat.lastChat}
                         />
                     ))}
-                </div>  
+                </div>
+                <div className="messenger__goto">
+                    <div className='messenger__goto-text'>See all in messenger</div>
+                </div>
             </div>
     )
 }
